@@ -36,6 +36,7 @@ export const TypographyContent = styled(Typography)`
     font-family:roboto;
     font-weight: 400;
     line-height: 38px;
+    margin-left:10px;
 `;
 export const ImageBorder = styled(Box)`
 border:1px solid black;
@@ -47,6 +48,8 @@ bottom:50px;
 `;
 
 export const StyledButton = styled(Button)`
+    margin-top:30px;
+     margin-left:10px;
     background-color: black;
     color: white;
     line-height: 30px;
@@ -58,7 +61,7 @@ export const StyledButton = styled(Button)`
 `;
 export const FrameStyled = styled('div')`
     position:relative;
-    top:320px;
+    top:370px;
 `;
 
 export const FrameRightStyled = styled('div')`
