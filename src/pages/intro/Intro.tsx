@@ -1,8 +1,7 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
 import {
-  FrameRightStyled,
+FrameRightStyled,
   FrameStyled,
   ImageBorder,
   ImageStyled,
@@ -20,34 +19,34 @@ import { RightFrame } from "../../../public/svg/RightFrame";
 const Intro = () => {
   return (
     <>
-      <FrameStyled>
-        <LeftFrame />
-      </FrameStyled>
-      <Box sx={{ margin: "90px 200px 0 220px" }}>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            <LeftColumn>
-              <TypographyStyled>Collections</TypographyStyled>
-              <TypographyContent>
-                You can explore and shop many different collections from various
-                brands here.
-              </TypographyContent>
-              <StyledButton variant="contained">
-                {" "}
-                <FontAwesomeIcon icon={faShoppingBag} scale={"1.25x"} /> Shop
+    <FrameStyled>
+    <LeftFrame />
+    </FrameStyled>
+    <Box sx={{ margin: "90px 200px 0 220px" }}>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <LeftColumn>
+            <TypographyStyled>Collections</TypographyStyled>
+            <TypographyContent>
+              You Can Explore And Shop Many Different Collections <br/> From Various
+              brands here.
+            </TypographyContent>
+            <StyledButton variant="contained">
+              {" "}
+              <FontAwesomeIcon icon={faShoppingBag} scale={"1.25x"} /> Shop
                 Now
-              </StyledButton>
-            </LeftColumn>
-          </Grid>
-          <Grid item xs={6}>
-            <RightColumn>
-              <ImageStyled src="img/19.png" alt="Mountains" />
-              <ImageBorder />
-            </RightColumn>
-          </Grid>
+            </StyledButton>
+          </LeftColumn>
         </Grid>
-      </Box>
-      <FrameRightStyled>
+        <Grid item xs={6}>
+          <RightColumn>
+            <ImageStyled src="img/19.png" alt="Mountains" />
+            <ImageBorder />
+          </RightColumn>
+        </Grid>
+      </Grid>
+    </Box>
+    <FrameRightStyled>
         <RightFrame />
       </FrameRightStyled>
     </>

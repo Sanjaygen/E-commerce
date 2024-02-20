@@ -1,10 +1,9 @@
-import { Box } from "@mui/material";
 import styled from "styled-components";
 
 export const MainDiv = styled('div')`
-background-color:#fff;
+// background-color:#fff;
 position:relative;
-
+height:100vh;
 `;
 export const LogoDiv = styled('div')`
 
@@ -13,7 +12,7 @@ justify-content: center;
 align-items: center;
 position:relative;
 top: 57px;
-left: 130px;
+// left: 130px;
 `;
 
 export const ImageStyled = styled('img')`

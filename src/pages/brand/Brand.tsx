@@ -28,7 +28,7 @@ const Brand = () => {
     
       <Typography style={{ transform: 'rotate(-90deg)' ,color:'black',position:'relative',right:'535px',bottom:'200px',fontWeight:'400',fontSize:'34px',fontFamily:'roboto'}}>Explore new and popular styles</Typography>
 
-      <Box sx={{position:'relative',bottom:'170px'}}>
+      <Box sx={{position:'relative',bottom:'250px'}}>
         
       <Grid container spacing={0}>
         
@@ -39,28 +39,27 @@ const Brand = () => {
         <Grid item xs={12} sm={6}>
           <Grid container spacing={1} >
             <Grid item xs={5}>
-              <img src="img/01.png" alt="category-2" style={{ width: '250px', height: '250px'}}/>
+              <img src="img/01.png" alt="category-2" style={{ width: '250px', height: '250px',marginLeft:'10px'}}/>
             </Grid>
-            <Grid item xs={5}>
-               
-            <div style={{ position: 'relative' }}>
+            <Grid item xs={5} style={{ position: 'relative', left: '-50px' }}> {/* Adjusted positioning */}
+              <div style={{ position: 'relative' }}>
                   <img
                     src="img/03.png"
                     alt="category-3"
-                    style={{ width: '100%', maxWidth: '250px', height: 'auto' }}
+                    style={{ width: '100%', maxWidth: '250px', height: 'auto' ,marginLeft:'10px'}}
                   />
                   <Typography
-                    sx={{ position: 'absolute', top:20 , backgroundColor: 'black',color:'white',width:60,textAlign:'center'}}
+                    sx={{ position: 'absolute', top:20 ,left:'10px', backgroundColor: 'black',color:'white',width:60,textAlign:'center',zIndex:'1'}}
                   >
                     SALE
                   </Typography>
                 </div>
             </Grid>
             <Grid item xs={5}>
-              <img src="img/02.png" alt="category-4" style={{ width: '250px', height: '250px' }}/>
+              <img src="img/02.png" alt="category-4" style={{ width: '250px', height: '250px',marginLeft:'10px' }}/>
             </Grid>
             <Grid item xs={5}>
-              <img src="img/20.png" alt="category-5"style={{ width: '250px', height: '250px' }} />
+              <img src="img/20.png" alt="category-5"style={{ width: '250px', height: '250px', marginLeft:'-40px'}} />
             </Grid>
           </Grid>
         </Grid>
