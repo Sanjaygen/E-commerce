@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import {  DivWrapper } from "./Footer.Styled";
+import { BottomContainer, DivWrapper, StyledIcon } from "./Footer.Styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -8,15 +8,22 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-
-<Button variant="text" sx={{ marginLeft: "250px", color: "white" }}>
-  Scroll To Top <FontAwesomeIcon icon={faArrowUp} />
-</Button>;
+import { useQuery } from "@apollo/client";
+import { QUERY } from "@/pages/homepage/query";
+import { api } from "@/service/backend-api";
 
 export const Footer = () => {
+  const { data } = useQuery(QUERY);
+  const { homes } = data || {};
+  const { footer, bottom } = homes?.data?.[0].attributes || {};
+  console.log('footer', footer);
+  console.log('bottom', bottom);
+
+  const bottomBg = bottom?.[0]?.colors?.bottom?.[0]?.color?.backgroundcolor;
+  const bottomText = bottom?.[0]?.colors?.bottom?.[0]?.color?.text;
   return (
     <>
-      <Box sx={{display: "flex" }}>
+      <Box sx={{ display: "flex" }}>
         <Grid
           container
           spacing={2}
@@ -49,59 +56,20 @@ export const Footer = () => {
               />
             </Typography>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              {footer?.[0]?.description}
             </Typography>
             <DivWrapper
               sx={{
                 gap: "25px",
                 mt: "30px",
-                position:'relative',
-                right:'20px'
+                position: 'relative',
+                right: '20px'
               }}
             >
-              <FontAwesomeIcon
-                icon={faFacebookF}
-                style={{
-                  marginLeft: "20px",
-                  fontSize: 28,
-                  border: "1px solid #fff",
-                  borderRadius: "50%",
-                  padding: "5px",
-                }}
-              />
-
-              <FontAwesomeIcon
-                icon={faTwitter}
-                style={{
-                  marginLeft: "20px",
-                  fontSize: 28,
-                  border: "1px solid #fff",
-                  borderRadius: "50%",
-                  padding: "5px"
-                }}
-              />
-             
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                style={{
-                  marginLeft: "20px",
-                  fontSize: 28,
-                  border: "1px solid #fff",
-                  borderRadius: "50%",
-                  padding: "5px"
-                }}
-              />
-               <FontAwesomeIcon
-                icon={faInstagram}
-                style={{
-                  marginLeft: "20px",
-                  fontSize: 28,
-                  border: "1px solid #fff",
-                  borderRadius: "50%",
-                  padding: "5px"
-                }}
-              />
+              <StyledIcon icon={faFacebookF} />
+              <StyledIcon icon={faTwitter} />
+              <StyledIcon icon={faLinkedinIn} />
+              <StyledIcon icon={faInstagram} />
             </DivWrapper>
           </Grid>
           <Grid
@@ -115,13 +83,13 @@ export const Footer = () => {
             }}
           >
             <Typography sx={{ color: "black", fontWeight: "550", mb: "10px" }}>
-              CATALOG
+              {footer?.[1]?.title}
             </Typography>
-            <Typography sx={{ mb: "5px" }}>Necklaces</Typography>
-            <Typography sx={{ mb: "5px" }}>Hoodies</Typography>
-            <Typography sx={{ mb: "5px" }}>Jewelry Box</Typography>
-            <Typography sx={{ mb: "5px" }}>T-Shirt</Typography>
-            <Typography sx={{ mb: "5px" }}>Jacket</Typography>
+            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[0]?.content}</Typography>
+            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[1]?.content}</Typography>
+            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[2]?.content}</Typography>
+            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[3]?.content}</Typography>
+            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[4]?.content}</Typography>
           </Grid>
           <Grid
             item
@@ -135,13 +103,13 @@ export const Footer = () => {
                 <Typography
                   sx={{ color: "black", fontWeight: "550", mb: "10px" }}
                 >
-                  ABOUT US
+                  {footer?.[2]?.title}
                 </Typography>
-                <Typography sx={{ mb: "5px" }}>Our Producers</Typography>
-                <Typography sx={{ mb: "5px" }}>Sitemap</Typography>
-                <Typography sx={{ mb: "5px" }}>FAQ</Typography>
-                <Typography sx={{ mb: "5px" }}>About Us</Typography>
-                <Typography sx={{ mb: "5px" }}>Terms & Conditions</Typography>
+                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[0]?.content}</Typography>
+                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[1]?.content}</Typography>
+                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[2]?.content}</Typography>
+                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[3]?.content}</Typography>
+                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[4]?.content}</Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -153,36 +121,28 @@ export const Footer = () => {
             sx={{ marginBottom: { xs: "20px", sm: 0 }, marginLeft: "50px" }}
           >
             <Typography sx={{ color: "black", fontWeight: "550", mb: "10px" }}>
-              CUSTOMER SERVICES
+              {footer?.[3]?.title}
             </Typography>
-            <Typography sx={{ mb: "8px" }}>Contact Us</Typography>
-            <Typography sx={{ mb: "8px" }}>Track Your Order</Typography>
-            <Typography sx={{ mb: "8px" }}>Product Care & Repair</Typography>
-            <Typography sx={{ mb: "8px" }}>Book an Appointment</Typography>
-            <Typography sx={{ mb: "8px" }}>Shipping & Returns</Typography>
+            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[0]?.content}</Typography>
+            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[1]?.content}</Typography>
+            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[2]?.content}</Typography>
+            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[3]?.content}</Typography>
+            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[4]?.content}</Typography>
           </Grid>
         </Grid>
       </Box>
-      <Box
-        sx={{
-          border: "1px solid black",
-          backgroundColor: "black",
-          color: "white",
-          display: "flex",
-          height: "52px",
-        }}
-      >
+      <BottomContainer bgColor={bottomBg} textColor={bottomText}>
         <div style={{ marginTop: "16px", marginLeft: "190px" }}>
-          © 2022 Coral , Inc.
+          {bottom?.[0]?.content}
         </div>
         <div style={{ marginTop: "14px", marginLeft: "280px" }}>
-          <img src="img/icons_payment.png" alt="no img" />
+          <img src={api + bottom?.[0]?.image?.data?.[0]?.attributes?.url} alt="no img" />
         </div>
         <Button variant="text" sx={{ marginLeft: "250px", color: "white" }}>
-          Scroll To Top{" "}
+          {bottom?.[0]?.button?.[0]?.title} {" "}
           <FontAwesomeIcon icon={faArrowUp} style={{ marginLeft: "10px" }} />
         </Button>
-      </Box>
+      </BottomContainer>
     </>
   );
 };

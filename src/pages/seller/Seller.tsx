@@ -5,79 +5,44 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import { BoxContainer, CustomCard, ProductContent, StyledTypography } from "./Seller.styled";
+import { BoxContainer, CustomCard, HotTypography, ProductContent, SaleTypography, StyledButton, StyledLink, StyledTypography, TypographySale } from "./Seller.styled";
+import { useQuery } from "@apollo/client";
+import { QUERY } from "../homepage/query";
+import { api } from "@/service/backend-api";
 
 const Seller = () => {
+  const { data } = useQuery(QUERY);
+  const { homes } = data || {};
+  const { silderProduct } = homes?.data?.[0].attributes || {};
+  console.log('silderProduct', silderProduct);
 
+  const sellerButton = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.background;
+  const sellerText = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.text;
   return (
     <BoxContainer>
       <Typography
         variant="h4"
         sx={{ textAlign: "center", position: "relative" }}
       >
-        Best Sellers
+        {silderProduct?.[0]?.title}
       </Typography>
       <Box sx={{ position: "relative" }}>
         <Box sx={{ marginLeft: "20px", marginTop: "25px" }}>
-          <Link
-            href={"#"}
-            sx={{
-              marginRight: "10px",
-              textDecoration: "none",
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
-            <b>All Products</b>
-          </Link>
-          <Link
-            href={"#"}
-            sx={{
-              marginRight: "10px",
-              textDecoration: "none",
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
-            T-Shirt
-          </Link>
-          <Link
-            href={"#"}
-            sx={{
-              marginRight: "10px",
-              textDecoration: "none",
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
-            Hoodies
-          </Link>
-          <Link
-            href={"#"}
-            sx={{
-              marginRight: "10px",
-              textDecoration: "none",
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
-            Jacket
-          </Link>
-          <Button
-            variant="contained"
-            sx={{
-              marginRight: "0px",
-              float: "right",
-              height: "30px",
-              position: "relative",
-              bottom: "10px",
-              right: "10px",
-              backgroundColor: "black",
-              color: "white",
-            }}
-          >
-            Show All
-          </Button>
+          <StyledLink  href={"#"}>
+            <b>{silderProduct?.[0]?.navbar?.[0]?.title}</b>
+          </StyledLink>
+          <StyledLink href={"#"}>
+            {silderProduct?.[0]?.navbar?.[1]?.title}
+          </StyledLink>
+          <StyledLink href={"#"}>
+            {silderProduct?.[0]?.navbar?.[2]?.title}
+          </StyledLink>
+          <StyledLink href={"#"}>
+            {silderProduct?.[0]?.navbar?.[3]?.title}
+          </StyledLink>
+          <StyledButton variant="contained" bgColor={sellerButton} textColor={sellerText} >
+            {silderProduct?.[0]?.filterbutton?.[0]?.title}
+          </StyledButton>
         </Box>
 
         <div
@@ -91,30 +56,18 @@ const Seller = () => {
             <CustomCard>
               <CardContent>
                 <img
-                  src="img/11.png"
+                  src={api+silderProduct?.[0]?.cards?.[0]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
-                <Typography
-                  sx={{
-                    position: "absolute",
-                    top: "40px",
-                    left: "17px",
-                    backgroundColor: "#FF6F61",
-                    color: "white",
-                    width: "60px",
-                    textAlign: "center",
-                  }}
-                >
-                  HOT
-                </Typography>
+                <HotTypography> HOT</HotTypography>
                 <StyledTypography variant="h6">
-                  Basic Dress Green
+                  {silderProduct?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2"> Dress</Typography>
+                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[0]?.content}</Typography>
                   <Typography variant="body2" sx={{ marginRight: "20px" }}>
-                    $63.85
+                  {silderProduct?.[0]?.cards?.[0]?.prize}
                   </Typography>
                 </ProductContent>
               </CardContent>
@@ -123,7 +76,7 @@ const Seller = () => {
             <CustomCard>
               <CardContent>
                 <img
-                  src="img/14.png"
+                  src={api+silderProduct?.[0]?.cards?.[1]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 2"
                   style={{
                     width: "95%",
@@ -133,12 +86,12 @@ const Seller = () => {
                   }}
                 />
                 <StyledTypography variant="h6">
-                  Nike Sportswear Futura Luxe
+                {silderProduct?.[0]?.cards?.[1]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2"> Dress</Typography>
+                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[1]?.content}</Typography>
                   <Typography variant="body2" sx={{ marginRight: "30px" }}>
-                    $63.85
+                  {silderProduct?.[0]?.cards?.[1]?.prize}
                   </Typography>
                 </ProductContent>
               </CardContent>
@@ -147,7 +100,7 @@ const Seller = () => {
             <CustomCard>
               <CardContent style={{ position: "relative" }}>
                 <img
-                  src="img/04.png"
+                  src={api+silderProduct?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
                   style={{
                     width: "95%",
@@ -156,26 +109,14 @@ const Seller = () => {
                     right: "45px",
                   }}
                 />
-                <Typography
-                  sx={{
-                    position: "absolute",
-                    top: "40px",
-                    right: "249px",
-                    backgroundColor: "black",
-                    color: "white",
-                    width: "60px",
-                    textAlign: "center",
-                  }}
-                >
-                  SALE
-                </Typography>
+                <SaleTypography> SALE </SaleTypography>
                 <StyledTypography variant="h6">
-                  Yellow Reserved Hoodie
+                {silderProduct?.[0]?.cards?.[2]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2"> Dress</Typography>
+                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[2]?.content}</Typography>
                   <Typography variant="body2" sx={{ marginRight: "55px" }}>
-                    $63.85
+                  {silderProduct?.[0]?.cards?.[2]?.prize}
                   </Typography>
                 </ProductContent>
               </CardContent>
@@ -184,33 +125,21 @@ const Seller = () => {
             <CustomCard>
               <CardContent>
                 <img
-                  src="img/12.png"
+                  src={api+silderProduct?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
                   style={{ width: "95%", position: "relative", right: "65px" }}
                 />
-                <Typography
-                  sx={{
-                    position: "absolute",
-                    top: "60px",
-                    left: "798px",
-                    backgroundColor: "black",
-                    color: "white",
-                    width: "60px",
-                    textAlign: "center",
-                  }}
-                >
-                  SALE
-                </Typography>
+                <TypographySale> SALE</TypographySale>
                 <div
                   style={{ position: "relative", right: "55px", top: "10px" }}
                 >
                   <StyledTypography variant="h6">
-                    Nike Air Zoom Pegasus
+                  {silderProduct?.[0]?.cards?.[3]?.title}
                   </StyledTypography>
                   <ProductContent>
-                    <Typography variant="body2"> Dress</Typography>
+                    <Typography variant="body2"> {silderProduct?.[0]?.cards?.[3]?.content}</Typography>
                     <Typography variant="body2" sx={{ marginRight: "30px" }}>
-                      $63.85
+                    {silderProduct?.[0]?.cards?.[3]?.prize}
                     </Typography>
                   </ProductContent>
                 </div>

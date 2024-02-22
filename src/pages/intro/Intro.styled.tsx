@@ -1,3 +1,4 @@
+import { appColors } from "@/theme/color.Config";
 import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 
@@ -20,7 +21,7 @@ export const ImageStyled = styled('img')`
   height:450px;
   border-radius:120px 0px 120px 0px;
   position:relative;
-  bottom:150px;
+  bottom:115px;
   right:10px;
 
 `;
@@ -47,11 +48,11 @@ position:absolute;
 bottom:50px;
 `;
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
     margin-top:30px;
      margin-left:10px;
-    background-color: black;
-    color: white;
+     background: ${({bgColor}) => bgColor || appColors['white']};
+     color: ${({textColor}) => textColor || appColors['black']};
     line-height: 30px;
     gap: 5px;
 

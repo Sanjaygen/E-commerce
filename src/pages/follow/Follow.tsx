@@ -1,6 +1,13 @@
+import { useQuery } from "@apollo/client";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { QUERY } from "../homepage/query";
+import { api } from "@/service/backend-api";
 
 export const Follow = () => {
+  const { data } = useQuery(QUERY);
+  const { homes } = data || {};
+  const { feedback } = homes?.data?.[0].attributes || {};
+  console.log('feedback', feedback);
   return (
     <Box
       sx={{
@@ -12,7 +19,7 @@ export const Follow = () => {
     >
       <Box sx={{ position: "relative", top: "60px" }}>
         <Typography variant="h4" sx={{ textAlign: "center" }}>
-          Follow Products And Discounts On Instagram
+          {feedback?.[0]?.title}
         </Typography>
         <div
           style={{
@@ -22,32 +29,32 @@ export const Follow = () => {
           }}
         >
           <img
-            src="img/follow/card1.png"
+            src={api+feedback?.[0]?.cardItems?.[0]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 1"
-            style={{ width: "200px", height: "200px", margin: "0 5px" }} // Added margin for gaps
+            style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
           <img
-            src="img/follow/card2.png"
+            src={api+feedback?.[0]?.cardItems?.[1]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 2"
             style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
           <img
-            src="img/follow/card3.png"
+            src={api+feedback?.[0]?.cardItems?.[2]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 3"
             style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
           <img
-            src="img/follow/card4.png"
+            src={api+feedback?.[0]?.cardItems?.[3]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 4"
             style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
           <img
-            src="img/follow/card5.png"
+            src={api+feedback?.[0]?.cardItems?.[4]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 5"
             style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
           <img
-            src="img/follow/card6.png"
+            src={api+feedback?.[0]?.cardItems?.[5]?.brandlogo?.data?.[0]?.attributes?.url}
             alt="Brand 6"
             style={{ width: "200px", height: "200px", margin: "0 5px" }} 
           />
@@ -57,7 +64,7 @@ export const Follow = () => {
           variant="h4"
           sx={{ textAlign: "center", marginTop: "50px" }}
         >
-          Or Subscribe To The Newsletter
+         {feedback?.[0]?.heading}
         </Typography>
         <TextField
           id="standard-basic"
@@ -82,7 +89,7 @@ export const Follow = () => {
             marginLeft: "50px",
           }}
         >
-          SUBMIT
+          {feedback?.[0]?.button?.[0]?.title}
         </Button>
       </Box>
     </Box>
