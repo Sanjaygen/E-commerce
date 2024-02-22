@@ -12,11 +12,14 @@ import { Banner } from "../banner/Banner";
 
 const Homepage = () => {
   const { data } = useQuery(QUERY);
-  console.log("data", data);
+  const { homes } = data || {};
+  const {topmain} = homes?.data?.[0].attributes || {};
+  const homeBack= topmain?.[0]?.colors?.banner?.[0]?.colors?.background;
+  const homeText= topmain?.[0]?.colors?.banner?.[0]?.colors?.text;
 
   return (
     <>
-      <BoxStyled>
+      <BoxStyled bgColor={homeBack} textColor={homeText}>
         <Header />
         <Intro />
       </BoxStyled>

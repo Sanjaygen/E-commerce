@@ -1,69 +1,70 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import {
   ImageStyled,
   LogoDiv,
   MainDiv,
+  SaleTypography,
+  StyledTypography,
 } from "./Brand.styled";
+import { useQuery } from "@apollo/client";
+import { QUERY } from "../homepage/query";
+import { api } from "@/service/backend-api";
 
 const Brand = () => {
-  const imageFiles = [
-    "brand-1.png",
-    "brand-5.png",
-    "brand-3.png",
-    "brand-4.png",
-    "brand-2.png",
-  ];
+  const { data } = useQuery(QUERY);
+  const { homes } = data || {};
+  const { brands, categorey } = homes?.data?.[0].attributes || {};
+  console.log('brands', brands);
+  console.log('categorey', categorey);
+
+
   return (
     <MainDiv>
-        
+
       <LogoDiv>
-        {imageFiles.map((image, index) => (
+        {brands && brands.map((brand: any, index: number) => (
           <ImageStyled
             key={index}
-            src={`/img/${image}`}
+            src={api + brand?.brandlogo?.data?.[0]?.attributes?.url}
             alt={`Image ${index}`}
           />
         ))}
       </LogoDiv>
-    
-      <Typography style={{ transform: 'rotate(-90deg)' ,color:'black',position:'relative',right:'535px',bottom:'200px',fontWeight:'400',fontSize:'34px',fontFamily:'roboto'}}>Explore new and popular styles</Typography>
 
-      <Box sx={{position:'relative',bottom:'250px'}}>
-        
-      <Grid container spacing={0}>
-        
-        <Grid item xs={12} sm={6}>
-        
-        <img src="img/image-category-1.png" alt="category-1" style={{ width: '500px', height: '512px', marginLeft:'250px'}} />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Grid container spacing={1} >
-            <Grid item xs={5}>
-              <img src="img/01.png" alt="category-2" style={{ width: '250px', height: '250px',marginLeft:'10px'}}/>
-            </Grid>
-            <Grid item xs={5} style={{ position: 'relative', left: '-50px' }}> {/* Adjusted positioning */}
-              <div style={{ position: 'relative' }}>
+      <StyledTypography variant="h5">{categorey?.[0].title}</StyledTypography>
+
+      <Box sx={{ position: 'relative', bottom: '200px' }}>
+
+        <Grid container spacing={0}>
+
+          <Grid item xs={12} sm={6}>
+
+            <img src={api + categorey?.[0]?.images?.[0]?.brandlogo?.data?.[0]?.attributes?.url} alt="category-1" style={{ width: '500px', height: '512px', marginLeft: '250px'}} />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Grid container spacing={1} >
+              <Grid item xs={5}>
+                <img src={api + categorey?.[0]?.images?.[1]?.brandlogo?.data?.[0]?.attributes?.url} alt="category-2" style={{ width: '250px', height: '250px', marginLeft: '10px' }} />
+              </Grid>
+              <Grid item xs={5} style={{ position: 'relative', left: '-50px' }}>
+                <div style={{ position: 'relative' }}>
                   <img
-                    src="img/03.png"
+                    src={api + categorey?.[0]?.images?.[3]?.brandlogo?.data?.[0]?.attributes?.url}
                     alt="category-3"
-                    style={{ width: '100%', maxWidth: '250px', height: 'auto' ,marginLeft:'10px'}}
+                    style={{ width: '100%', maxWidth: '250px', height: 'auto', marginLeft: '10px' }}
                   />
-                  <Typography
-                    sx={{ position: 'absolute', top:20 ,left:'10px', backgroundColor: 'black',color:'white',width:60,textAlign:'center',zIndex:'1'}}
-                  >
-                    SALE
-                  </Typography>
+                  <SaleTypography>SALE </SaleTypography>
                 </div>
-            </Grid>
-            <Grid item xs={5}>
-              <img src="img/02.png" alt="category-4" style={{ width: '250px', height: '250px',marginLeft:'10px' }}/>
-            </Grid>
-            <Grid item xs={5}>
-              <img src="img/20.png" alt="category-5"style={{ width: '250px', height: '250px', marginLeft:'-40px'}} />
+              </Grid>
+              <Grid item xs={5}>
+                <img src={api + categorey?.[0]?.images?.[2]?.brandlogo?.data?.[0]?.attributes?.url} alt="category-4" style={{ width: '250px', height: '250px', marginLeft: '10px' }} />
+              </Grid>
+              <Grid item xs={5}>
+                <img src={api + categorey?.[0]?.images?.[4]?.brandlogo?.data?.[0]?.attributes?.url} alt="category-5" style={{ width: '250px', height: '250px', marginLeft: '-40px' }} />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
       </Box>
     </MainDiv>
   );

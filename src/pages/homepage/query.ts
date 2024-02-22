@@ -20,17 +20,17 @@ export const QUERY = gql`
             link
             description
             colors
-            frame1 {
-              data {
-                attributes {
+            frame1{
+              data{
+                attributes{
                   alternativeText
                   url
                 }
               }
             }
-            frame2 {
-              data {
-                attributes {
+            frame2{
+              data{
+                attributes{
                   alternativeText
                   url
                 }
@@ -118,6 +118,14 @@ export const QUERY = gql`
             image {
               data {
                 attributes {
+                  url
+                  alternativeText
+                }
+              }
+            }
+            image2{
+              data{
+                attributes{
                   url
                   alternativeText
                 }

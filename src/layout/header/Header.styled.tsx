@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 
 export const BoxStyled = styled(Box)`
-    background-color:#ebedf0;
+    // background-color:#ebedf0;
     margin: 0 auto  ;
     width: 75%;
 `;
