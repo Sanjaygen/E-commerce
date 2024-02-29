@@ -6,6 +6,7 @@ import {
   ImageBorder,
   ImageStyled,
   LeftColumn,
+  MainDiv,
   RightColumn,
   StyledButton,
   TypographyContent,
@@ -22,7 +23,7 @@ import { api } from "@/service/backend-api";
 const Intro = () => {
   const { data } = useQuery(QUERY);
   const { homes } = data || {};
-  const { topmain } = homes?.data?.[0].attributes || {};
+  const { topmain } = homes?.data?.[0]?.attributes || {};
   console.log('topmain', topmain);
 
   const leftFrameData = topmain?.[0]?.frame1?.data?.[0]?.attributes || {};
@@ -36,12 +37,13 @@ const Intro = () => {
 
   return (
     <>
+    <MainDiv>
       <FrameStyled>
         <LeftFrame {...leftFrameData} />
       </FrameStyled>
       <Box sx={{ margin: "90px 200px 0 220px" }}>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <LeftColumn>
               <TypographyStyled>{topmain?.[0].title}</TypographyStyled>
               <TypographyContent>
@@ -54,17 +56,19 @@ const Intro = () => {
               </StyledButton>
             </LeftColumn>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <RightColumn>
+              <ImageBorder>
               <ImageStyled src={api + topmain?.[0]?.image?.data?.[0]?.attributes?.url} alt="Mountains" />
-              <ImageBorder />
+              </ImageBorder>
             </RightColumn>
           </Grid>
         </Grid>
       </Box>
       <FrameRightStyled>
-        <RightFrame {...rightFrameData} />
+        <RightFrame style={{ height: '50px', width: '50px' }} {...rightFrameData} />
       </FrameRightStyled>
+      </MainDiv>
     </>
   );
 };
