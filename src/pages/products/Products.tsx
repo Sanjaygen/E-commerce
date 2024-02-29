@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
   Box,
   CardContent,
@@ -5,7 +6,7 @@ import {
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import { BoxContainer, CommonDiv, CustomCard, HotTypography, ProductContent, SaleTypography, StyledButton, StyledLink, StyledTypography, TopTypography, TypographySale } from "./Product.styled";
+import { BoxContainer, BoxStyled, CommonDiv, CustomCard, FirstDiv, HotTypography, ProductContent, SaleTypography, SecDiv, StyledButton, StyledLink, StyledTypography, TopTypography, TypographySale } from "./Product.styled";
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
@@ -13,7 +14,7 @@ import { api } from "@/service/backend-api";
 const Products = () => {
   const { data } = useQuery(QUERY);
   const { homes } = data || {};
-  const { productitems } = homes?.data?.[0].attributes || {};
+  const { productitems } = homes?.data?.[0]?.attributes || {};
   console.log('data', data);
 
   const filterButton = productitems?.[0]?.filterbutton?.[0]?.color?.filter?.[0]?.color?.background;
@@ -22,16 +23,9 @@ const Products = () => {
     <BoxContainer>
       <TopTypography variant="h4"> {productitems?.[0]?.title}</TopTypography>
       <Box sx={{ position: 'relative' }}>
-        <Box sx={{ marginLeft: "20px", marginTop: '25px' }}>
+        <BoxStyled>
           <StyledLink
-            href={"#"}
-            sx={{
-              marginRight: "10px",
-              textDecoration: "none",
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
+            href={"#"}>
             <b>{productitems?.[0]?.navbar?.[0]?.title}</b>
           </StyledLink>
           <StyledLink href={"#"}>
@@ -47,10 +41,10 @@ const Products = () => {
             <FontAwesomeIcon icon={faFilter} scale={"1.25x"} />
             {productitems?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
-        </Box>
+        </BoxStyled>
 
         <CommonDiv>
-          <div style={{ display: "flex" }}>
+          <FirstDiv>
             <CustomCard>
               <CardContent>
                 <img
@@ -73,7 +67,7 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[1]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 2"
-                  style={{ width: "95%", marginBottom: "10px", position: 'relative', right: '15px' }}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[1]?.title}
@@ -90,7 +84,7 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 3"
-                  style={{ width: "95%", marginBottom: "10px", position: 'relative', right: '30px' }}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[2]?.title}
@@ -107,7 +101,7 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
-                  style={{ width: "95%", marginBottom: "10px", position: 'relative', right: '45px' }}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
                 <SaleTypography> SALE</SaleTypography>
                 <StyledTypography variant="h6">
@@ -119,9 +113,9 @@ const Products = () => {
                 </ProductContent>
               </CardContent>
             </CustomCard>
-          </div>
+          </FirstDiv>
 
-          <div style={{ display: "flex", position: 'relative' }}>
+          <SecDiv>
             <CustomCard>
               <CardContent>
                 <img
@@ -143,10 +137,10 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[5]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
-                  style={{ width: "95%", position: 'relative', right: '10px' }}
+                  style={{ width: "95%", position: 'relative'}}
                 />
                 <TypographySale> SALE</TypographySale>
-                <div style={{ position: 'relative', right: '8px', top: '10px' }}>
+                <div style={{ position: 'relative',top: '10px' }}>
                   <StyledTypography variant="h6">
                     {productitems?.[0]?.cards?.[5]?.title}
                   </StyledTypography>
@@ -163,9 +157,9 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[6]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 7"
-                  style={{ width: "95%", marginBottom: "10px", position: 'relative', right: '25px' }}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
-                <div style={{ position: 'relative', right: '17px' }}>
+                <div style={{ position: 'relative' }}>
                   <StyledTypography variant="h6">{productitems?.[0]?.cards?.[6]?.title}</StyledTypography>
                   <ProductContent>
                     <Typography variant="body2">{productitems?.[0]?.cards?.[6]?.content}</Typography>
@@ -180,9 +174,9 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[7]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 8"
-                  style={{ width: "95%", marginBottom: "10px", position: 'relative', right: '40px' }}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
-                <div style={{ position: 'relative', right: '30px' }}>
+                <div style={{ position: 'relative', }}>
                   <StyledTypography variant="h3" >
                     {productitems?.[0]?.cards?.[7]?.title}
                   </StyledTypography>
@@ -193,7 +187,7 @@ const Products = () => {
                 </div>
               </CardContent>
             </CustomCard>
-          </div>
+          </SecDiv >
         </CommonDiv>
       </Box>
     </BoxContainer>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
   Box,
   Button,
@@ -5,7 +6,7 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import { BoxContainer, CustomCard, HotTypography, ProductContent, SaleTypography, StyledButton, StyledLink, StyledTypography, TypographySale } from "./Seller.styled";
+import { BoxContainer, BoxStyled, CustomCard, HotTypography, ImgDiv, ProductContent, RowDiv, SaleTypography, StyledButton, StyledLink, StyledTypography, TopTypography, TypographySale } from "./Seller.styled";
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
@@ -13,20 +14,20 @@ import { api } from "@/service/backend-api";
 const Seller = () => {
   const { data } = useQuery(QUERY);
   const { homes } = data || {};
-  const { silderProduct } = homes?.data?.[0].attributes || {};
+  const { silderProduct } = homes?.data?.[0]?.attributes || {};
   console.log('silderProduct', silderProduct);
 
   const sellerButton = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.background;
   const sellerText = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.text;
   return (
     <BoxContainer>
-      <Typography
+      <TopTypography
         variant="h4"
-        sx={{ textAlign: "center", position: "relative" }}
+        sx={{ }}
       >
         {silderProduct?.[0]?.title}
-      </Typography>
-      <Box sx={{ position: "relative" }}>
+      </TopTypography>
+      <BoxStyled sx={{ position: "relative" }}>
         <Box sx={{ marginLeft: "20px", marginTop: "25px" }}>
           <StyledLink  href={"#"}>
             <b>{silderProduct?.[0]?.navbar?.[0]?.title}</b>
@@ -45,14 +46,8 @@ const Seller = () => {
           </StyledButton>
         </Box>
 
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+        <RowDiv>
+          <ImgDiv>
             <CustomCard>
               <CardContent>
                 <img
@@ -81,8 +76,8 @@ const Seller = () => {
                   style={{
                     width: "95%",
                     marginBottom: "10px",
-                    position: "relative",
-                    right: "15px",
+                    position: "relative"
+    
                   }}
                 />
                 <StyledTypography variant="h6">
@@ -105,8 +100,8 @@ const Seller = () => {
                   style={{
                     width: "95%",
                     marginBottom: "10px",
-                    position: "relative",
-                    right: "45px",
+                    position: "relative"
+                    
                   }}
                 />
                 <SaleTypography> SALE </SaleTypography>
@@ -127,11 +122,11 @@ const Seller = () => {
                 <img
                   src={api+silderProduct?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
-                  style={{ width: "95%", position: "relative", right: "65px" }}
+                  style={{ width: "95%", position: "relative"}}
                 />
                 <TypographySale> SALE</TypographySale>
                 <div
-                  style={{ position: "relative", right: "55px", top: "10px" }}
+                  style={{ position: "relative", top: "10px" }}
                 >
                   <StyledTypography variant="h6">
                   {silderProduct?.[0]?.cards?.[3]?.title}
@@ -145,9 +140,9 @@ const Seller = () => {
                 </div>
               </CardContent>
             </CustomCard>
-          </div>
-        </div>
-      </Box>
+          </ImgDiv>
+        </RowDiv>
+      </BoxStyled>
     </BoxContainer>
   );
 };

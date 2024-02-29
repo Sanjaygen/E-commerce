@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { BottomContainer, DivWrapper, StyledIcon } from "./Footer.Styled";
+import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.Styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -15,7 +16,7 @@ import { api } from "@/service/backend-api";
 export const Footer = () => {
   const { data } = useQuery(QUERY);
   const { homes } = data || {};
-  const { footer, bottom } = homes?.data?.[0].attributes || {};
+  const { footer, bottom } = homes?.data?.[0]?.attributes || {};
   console.log('footer', footer);
   console.log('bottom', bottom);
 
@@ -23,7 +24,8 @@ export const Footer = () => {
   const bottomText = bottom?.[0]?.colors?.bottom?.[0]?.color?.text;
   return (
     <>
-      <Box sx={{ display: "flex" }}>
+    <ToppDiv>
+      <StyledBox>
         <Grid
           container
           spacing={2}
@@ -82,14 +84,14 @@ export const Footer = () => {
               marginBottom: { xs: "20px", sm: 0, marginLeft: "50px" },
             }}
           >
-            <Typography sx={{ color: "black", fontWeight: "550", mb: "10px" }}>
+            <CatTypography sx={{ color: "black", fontWeight: "600", mb: "10px" }}>
               {footer?.[1]?.title}
-            </Typography>
-            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[0]?.content}</Typography>
-            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[1]?.content}</Typography>
-            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[2]?.content}</Typography>
-            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[3]?.content}</Typography>
-            <Typography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[4]?.content}</Typography>
+            </CatTypography>
+            <CatTypography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[0]?.content}</CatTypography>
+            <CatTypography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[1]?.content}</CatTypography>
+            <CatTypography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[2]?.content}</CatTypography>
+            <CatTypography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[3]?.content}</CatTypography>
+            <CatTypography sx={{ mb: "5px" }}>{footer?.[1]?.items?.[4]?.content}</CatTypography>
           </Grid>
           <Grid
             item
@@ -100,16 +102,16 @@ export const Footer = () => {
           >
             <Grid container spacing={0} sx={{ marginLeft: "100px" }}>
               <Grid item xs={8} md={6}>
-                <Typography
-                  sx={{ color: "black", fontWeight: "550", mb: "10px" }}
+                <AbTypography
+                  sx={{ color: "black", fontWeight: "600", mb: "10px" }}
                 >
                   {footer?.[2]?.title}
-                </Typography>
-                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[0]?.content}</Typography>
-                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[1]?.content}</Typography>
-                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[2]?.content}</Typography>
-                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[3]?.content}</Typography>
-                <Typography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[4]?.content}</Typography>
+                </AbTypography>
+                <AbTypography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[0]?.content}</AbTypography>
+                <AbTypography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[1]?.content}</AbTypography>
+                <AbTypography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[2]?.content}</AbTypography>
+                <AbTypography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[3]?.content}</AbTypography>
+                <AbTypography sx={{ mb: "5px" }}>{footer?.[2]?.items?.[4]?.content}</AbTypography>
               </Grid>
             </Grid>
           </Grid>
@@ -120,29 +122,30 @@ export const Footer = () => {
             md={3}
             sx={{ marginBottom: { xs: "20px", sm: 0 }, marginLeft: "50px" }}
           >
-            <Typography sx={{ color: "black", fontWeight: "550", mb: "10px" }}>
+            <CusTypography sx={{ color: "black", fontWeight: "600", mb: "10px" }}>
               {footer?.[3]?.title}
-            </Typography>
-            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[0]?.content}</Typography>
-            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[1]?.content}</Typography>
-            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[2]?.content}</Typography>
-            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[3]?.content}</Typography>
-            <Typography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[4]?.content}</Typography>
+            </CusTypography>
+            <CusTypography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[0]?.content}</CusTypography>
+            <CusTypography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[1]?.content}</CusTypography>
+            <CusTypography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[2]?.content}</CusTypography>
+            <CusTypography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[3]?.content}</CusTypography>
+            <CusTypography sx={{ mb: "8px" }}>{footer?.[3]?.items?.[4]?.content}</CusTypography>
           </Grid>
         </Grid>
-      </Box>
+      </StyledBox>
       <BottomContainer bgColor={bottomBg} textColor={bottomText}>
-        <div style={{ marginTop: "16px", marginLeft: "190px" }}>
+        <TopicDiv>
           {bottom?.[0]?.content}
-        </div>
-        <div style={{ marginTop: "14px", marginLeft: "280px" }}>
+        </TopicDiv>
+        <LogDiv>
           <img src={api + bottom?.[0]?.image?.data?.[0]?.attributes?.url} alt="no img" />
-        </div>
-        <Button variant="text" sx={{ marginLeft: "250px", color: "white" }}>
-          {bottom?.[0]?.button?.[0]?.title} {" "}
+        </LogDiv>
+        <StyledButton variant="text">
+          {/* {bottom?.[0]?.button?.[0]?.title} {" "} */}
           <FontAwesomeIcon icon={faArrowUp} style={{ marginLeft: "10px" }} />
-        </Button>
+        </StyledButton>
       </BottomContainer>
+      </ToppDiv>
     </>
   );
 };
