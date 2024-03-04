@@ -28,6 +28,7 @@ width: 69%;
 export const TopTypography = styled(Typography)`
 text-align: center;
 position: relative;
+font-weight: 600;
 
 @media (min-width: 390px) and (max-width: 767px) {
     text-align: center;
@@ -51,7 +52,8 @@ export const BoxStyled = styled(Box)`
   margin-left: 20px;
   margin-top: 25px;
   margin-bottom: 20px;
-  font-size: 13px; 
+  font-size: 15px; 
+  
   @media (min-width: 390px) and (max-width: 767px) {
     left: 10px;
     margin-top: 25px;
@@ -210,10 +212,10 @@ cursor: pointer;
 export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
 margin-right: 0px;
 float: right;
-height: 23px;
+height: 25px;
 position: relative;
 bottom: 10px;
-right: 10px;
+left: 80px;
 background: ${({bgColor}) => bgColor || appColors['white']};
 color: ${({textColor}) => textColor || appColors['black']};
 &:hover {

@@ -37,6 +37,8 @@ top: 60px
 
 export const TopTypography = styled(Typography)`
 text-align: center;
+font-weight: 600;
+font-size: 45px;
 @media (min-width: 390px) and (max-width: 767px) {
     text-align: center;
     position: relative;
@@ -162,6 +164,8 @@ margin-left: 480px;
 export const ContentTypography = styled(Typography)`
 text-align: center;
  margin-top: 50px;
+ font-weight: 600;
+font-size: 38px;
 
  @media (min-width: 390px) and (max-width: 767px) {
     text-align: center;
