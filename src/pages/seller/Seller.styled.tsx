@@ -72,6 +72,8 @@ export const BoxStyled = styled(Box)`
 export const RowDiv = styled("div")`
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: 20px;
   justify-content: space-between;
 
   @media (min-width: 390px) and (max-width: 767px) {
@@ -136,7 +138,7 @@ export const ImgDiv = styled('div')`
 export const ProductContent = styled('div')`
 display: flex;
 justify-content: space-between;
-
+margin-top: 15px;
 @media (min-width: 390px) and (max-width: 767px) {
     display: flex;
    justify-content: space-between;
@@ -153,6 +155,7 @@ font-family: "Open Sans", sans-serif;
 font-weight: 600;
 font-size: 16px;
 line-height: 21.79px;
+margin-top: 5px;
 
 
 @media (min-width: 390px) and (max-width: 767px) {
@@ -215,7 +218,7 @@ float: right;
 height: 25px;
 position: relative;
 bottom: 10px;
-left: 80px;
+left: 70px;
 background: ${({bgColor}) => bgColor || appColors['white']};
 color: ${({textColor}) => textColor || appColors['black']};
 &:hover {

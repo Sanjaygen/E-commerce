@@ -164,7 +164,7 @@ export const TypographyStyled = styled(Typography)`
   position: relative;
   font-weight: 200;
   font-size: 70px;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   bottom: 25px;
 
   @media (min-width: 390px) and (max-width: 767px) {

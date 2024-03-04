@@ -43,7 +43,7 @@ font-size: 45px;
     text-align: center;
     position: relative;
     left: 0px;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 15px;
   }
 

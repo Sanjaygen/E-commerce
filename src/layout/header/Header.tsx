@@ -83,7 +83,6 @@ export const Header = () => {
             fontSize: "16px",
             color: "black",
             justifyContent: "space-between",
-            fontFamily: "Open Sans",
             marginTop: "20px",
           }}
         >

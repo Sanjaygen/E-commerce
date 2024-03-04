@@ -101,7 +101,7 @@ export const StyledButton = styled(Button)<{
   position: relative;
   bottom: 4px;
   font-size: 12px; 
-  left: 62px; 
+  left: 50px; 
   gap: 10px;
   background: ${({ bgColor }) => bgColor || appColors["white"]};
   color: ${({ textColor }) => textColor || appColors["black"]};
@@ -201,6 +201,7 @@ export const CustomCard = styled("div")`
 export const ProductContent = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
 
   @media (min-width: 390px) and (max-width: 767px) {
     display: flex;
@@ -223,6 +224,7 @@ export const StyledTypography = styled(Typography)`
   font-weight: 600;
   font-size: 16px;
   line-height: 21.79px;
+  margin-top: 5px;
 
   @media (min-width: 390px) and (max-width: 767px) {
     font-family: "Open Sans", sans-serif;

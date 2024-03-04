@@ -5,7 +5,7 @@ import { Box, Button, Typography,  } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const ToppDiv = styled('div')`
-
+  height: 79vh;
  @media (min-width: 390px) and (max-width: 767px) {
   top: -390px;
   position: relative;
@@ -59,6 +59,7 @@ export const DivWrapper = styled("div")`
 
 export const CatTypography = styled(Typography)`
 
+line-height: 30px;
 @media (min-width: 390px) and (max-width: 767px) {
   left: -50px;
   position: relative;
@@ -88,6 +89,7 @@ export const CatTypography = styled(Typography)`
 `;
 
 export const AbTypography = styled(Typography)`
+line-height: 30px;
 
 @media (min-width: 390px) and (max-width: 767px) {
   left: -180px;
@@ -112,7 +114,7 @@ export const AbTypography = styled(Typography)`
 `;
 
 export const CusTypography = styled(Typography)`
-
+line-height: 28px;
 @media (min-width: 390px) and (max-width: 767px) {
   left: -50px;
   position: relative;
@@ -165,6 +167,8 @@ top: 160px;
   display: flex;
   height: 52px;
   position: relative;
+  top: 250px;
+  
  
 }
 
@@ -207,7 +211,7 @@ margin-left: 150px;
 
 export const LogDiv = styled('div')`
 margin-top: 14px;
-margin-left: 280px;
+margin-left: 290px;
 
 @media (min-width: 390px) and (max-width: 767px) {
   margin-top: 10px;
@@ -230,7 +234,7 @@ margin-left: 280px;
 `;
 
 export const StyledButton = styled(Button)`
- margin-left: 300px;
+ margin-left: 390px;
  color: white;
 
 @media (min-width: 390px) and (max-width: 767px) {
