@@ -5,6 +5,8 @@ import styled from "styled-components";
 export const TopTypography = styled(Typography)`
   text-align: center;
   position: relative;
+  font-weight: 600;
+  font-size: 32px;
 
   @media (min-width: 390px) and (max-width: 767px) {
     text-align: center;
@@ -32,7 +34,7 @@ export const BoxStyled = styled(Box)`
   margin-left: 20px;
   margin-top: 25px;
   margin-bottom: 20px;
-  font-size: 13px; 
+  font-size: 15px; 
   @media (min-width: 390px) and (max-width: 767px) {
     left: 10px;
     margin-top: 25px;
@@ -97,9 +99,9 @@ export const StyledButton = styled(Button)<{
   float: right;
   height: 30px;
   position: relative;
-  bottom: 0px;
+  bottom: 4px;
   font-size: 12px; 
-  right: 10px;
+  left: 62px; 
   gap: 10px;
   background: ${({ bgColor }) => bgColor || appColors["white"]};
   color: ${({ textColor }) => textColor || appColors["black"]};
