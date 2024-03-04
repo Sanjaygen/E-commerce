@@ -102,6 +102,7 @@ export const LinkStyled = styled(Link)`
   }
 `;
 export const LinkContainer: any = styled("div")<{ isClick?: boolean }>`
+font-family: 'Open Sans', sans-serif;
   .icon-acc {
     display: none;
   }

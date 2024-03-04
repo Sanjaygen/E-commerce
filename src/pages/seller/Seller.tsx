@@ -32,13 +32,13 @@ const Seller = () => {
           <StyledLink  href={"#"}>
             <b>{silderProduct?.[0]?.navbar?.[0]?.title}</b>
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {silderProduct?.[0]?.navbar?.[1]?.title}
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {silderProduct?.[0]?.navbar?.[2]?.title}
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {silderProduct?.[0]?.navbar?.[3]?.title}
           </StyledLink>
           <StyledButton variant="contained" bgColor={sellerButton} textColor={sellerText} >
@@ -60,8 +60,8 @@ const Seller = () => {
                   {silderProduct?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[0]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: "20px" }}>
+                  <Typography variant="body2"style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{silderProduct?.[0]?.cards?.[0]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: "20px" }}style={{ fontWeight: 'bold' }}>
                   {silderProduct?.[0]?.cards?.[0]?.prize}
                   </Typography>
                 </ProductContent>
@@ -84,8 +84,8 @@ const Seller = () => {
                 {silderProduct?.[0]?.cards?.[1]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[1]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: "30px" }}>
+                  <Typography variant="body2"style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{silderProduct?.[0]?.cards?.[1]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: "30px" }}style={{ fontWeight: 'bold' }}>
                   {silderProduct?.[0]?.cards?.[1]?.prize}
                   </Typography>
                 </ProductContent>
@@ -109,8 +109,8 @@ const Seller = () => {
                 {silderProduct?.[0]?.cards?.[2]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{silderProduct?.[0]?.cards?.[2]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: "55px" }}>
+                  <Typography variant="body2"style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{silderProduct?.[0]?.cards?.[2]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: "55px" }}style={{ fontWeight: 'bold' }}>
                   {silderProduct?.[0]?.cards?.[2]?.prize}
                   </Typography>
                 </ProductContent>
@@ -132,8 +132,8 @@ const Seller = () => {
                   {silderProduct?.[0]?.cards?.[3]?.title}
                   </StyledTypography>
                   <ProductContent>
-                    <Typography variant="body2"> {silderProduct?.[0]?.cards?.[3]?.content}</Typography>
-                    <Typography variant="body2" sx={{ marginRight: "30px" }}>
+                    <Typography variant="body2"style={{ color: 'rgba(0, 0, 0, 0.5)' }}> {silderProduct?.[0]?.cards?.[3]?.content}</Typography>
+                    <Typography variant="body2" sx={{ marginRight: "30px" }}style={{ fontWeight: 'bold' }}>
                     {silderProduct?.[0]?.cards?.[3]?.prize}
                     </Typography>
                   </ProductContent>

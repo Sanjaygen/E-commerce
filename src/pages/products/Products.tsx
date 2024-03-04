@@ -28,13 +28,13 @@ const Products = () => {
             href={"#"}>
             <b>{productitems?.[0]?.navbar?.[0]?.title}</b>
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {productitems?.[0]?.navbar?.[1]?.title}
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {productitems?.[0]?.navbar?.[2]?.title}
           </StyledLink>
-          <StyledLink href={"#"}>
+          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {productitems?.[0]?.navbar?.[3]?.title}
           </StyledLink>
           <StyledButton variant="contained" bgColor={filterButton} textColor={filterText}>
@@ -56,8 +56,8 @@ const Products = () => {
                   {productitems?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{productitems?.[0]?.cards?.[0]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '20px' }}>$63.85</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[0]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '20px' }} style={{ fontWeight: 'bold' }}>$63.85</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -73,8 +73,8 @@ const Products = () => {
                   {productitems?.[0]?.cards?.[1]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{productitems?.[0]?.cards?.[1]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '30px' }}>{productitems?.[0]?.cards?.[1]?.prize}</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[1]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '30px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[1]?.prize}</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -90,8 +90,8 @@ const Products = () => {
                   {productitems?.[0]?.cards?.[2]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{productitems?.[0]?.cards?.[2]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '40px' }}>{productitems?.[0]?.cards?.[2]?.prize}</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[2]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '40px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[2]?.prize}</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -108,8 +108,8 @@ const Products = () => {
                   {productitems?.[0]?.cards?.[3]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{productitems?.[0]?.cards?.[3]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '55px' }}>{productitems?.[0]?.cards?.[3]?.prize}</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[3]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '55px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[3]?.prize}</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -126,8 +126,8 @@ const Products = () => {
                 <HotTypography> HOT </HotTypography>
                 <StyledTypography variant="h6">{productitems?.[0]?.cards?.[4]?.title}</StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2">{productitems?.[0]?.cards?.[4]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '20px' }}>{productitems?.[0]?.cards?.[4]?.prize}</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[4]?.content}</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '20px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[4]?.prize}</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -145,8 +145,8 @@ const Products = () => {
                     {productitems?.[0]?.cards?.[5]?.title}
                   </StyledTypography>
                   <ProductContent>
-                    <Typography variant="body2">{productitems?.[0]?.cards?.[5]?.content}</Typography>
-                    <Typography variant="body2" sx={{ marginRight: '30px' }}>{productitems?.[0]?.cards?.[5]?.prize}</Typography>
+                    <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[5]?.content}</Typography>
+                    <Typography variant="body2" sx={{ marginRight: '30px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[5]?.prize}</Typography>
                   </ProductContent>
                 </div>
               </CardContent>
@@ -162,8 +162,8 @@ const Products = () => {
                 <div style={{ position: 'relative' }}>
                   <StyledTypography variant="h6">{productitems?.[0]?.cards?.[6]?.title}</StyledTypography>
                   <ProductContent>
-                    <Typography variant="body2">{productitems?.[0]?.cards?.[6]?.content}</Typography>
-                    <Typography variant="body2" sx={{ marginRight: '40px' }}>{productitems?.[0]?.cards?.[6]?.prize}</Typography>
+                    <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[6]?.content}</Typography>
+                    <Typography variant="body2" sx={{ marginRight: '40px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[6]?.prize}</Typography>
                   </ProductContent>
                 </div>
               </CardContent>
@@ -181,8 +181,8 @@ const Products = () => {
                     {productitems?.[0]?.cards?.[7]?.title}
                   </StyledTypography>
                   <ProductContent >
-                    <Typography variant="body2">{productitems?.[0]?.cards?.[7]?.content}</Typography>
-                    <Typography variant="body2" sx={{ marginRight: '20px' }}>{productitems?.[0]?.cards?.[7]?.prize}</Typography>
+                    <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[7]?.content}</Typography>
+                    <Typography variant="body2" sx={{ marginRight: '20px' }}style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[7]?.prize}</Typography>
                   </ProductContent>
                 </div>
               </CardContent>
