@@ -23,7 +23,6 @@ const Seller = () => {
     <BoxContainer>
       <TopTypography
         variant="h4"
-        sx={{ }}
       >
         {silderProduct?.[0]?.title}
       </TopTypography>

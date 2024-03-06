@@ -93,10 +93,10 @@ export const Header = () => {
           <LinkStyled href="#" >{navbar?.[4]?.title}</LinkStyled>
           <LinkStyled href="#" >{navbar?.[5]?.title}</LinkStyled>
           <LinkStyled href="#" >{navbar?.[6]?.title}</LinkStyled>
-          <Button variant="text" color="inherit" className="icon-acc">
+          {/* <Button variant="text" color="inherit" className="icon-acc">
               <FontAwesomeIcon icon={faUser} scale={"1.25x"} style={{marginRight:'10px'}}/>
               {header?.[0]?.headerbutton?.[0]?.title}
-            </Button>
+            </Button> */}
             <Button variant="text" color="inherit"   className="icon-acc1" >
               <FontAwesomeIcon icon={faShoppingBag} scale={"1.25x"} style={{marginRight:'10px'}}/>
               {header?.[0]?.headerbutton?.[1]?.title}

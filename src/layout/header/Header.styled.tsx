@@ -14,7 +14,7 @@ export const BoxStyled = styled(Box)`
   }
 
   @media (min-width: 1024px) and (max-width: 1440px) {
-  // background-color: rgba(30, 40, 50, 0.05);
+      
   }
 
 `;
@@ -22,6 +22,9 @@ export const AppBarStyled = styled(Box)`
   height: 90px;
   margin: 0 auto;
   width:72%;
+  @media(min-width:1200px) and (max-width:1440px){
+    width:80%;
+  }
 `;
 export const HeadLineStyled = styled("div")`
   display: flex;
@@ -52,15 +55,23 @@ export const FirstTypography = styled(Typography)`
     left: 60px;
     font-weight: 100;
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     font-size: 27px;
     position: relative;
     left: 280px;
   }
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     font-size: 28px;
     position: relative;
-    left: 300px;
+  }
+  @media (min-width: 1200px) and (max-width:1439){
+     left:450px;
+  }
+  @media(min-width:1440px){
+     left:550px;
+  }
+  @media(min-width:1450px){
+     left:350px;
   }
 `;
 export const IconBtn = styled(Box)`

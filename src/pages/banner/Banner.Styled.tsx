@@ -86,9 +86,14 @@ img{
     top:40px !important;
     left:420px!important;
 }
-@media (min-width: 1024px) and (max-width: 1440px){
+@media (min-width: 1024px) and (max-width: 1199px){
     position:absolute;
     top:40px !important;
     left:620px!important;
+}
+@media(min-width:1200px) and (max-width:1439px){
+    position:absolute;
+    top:140px !important;
+    left:850px!important;
 }
 `

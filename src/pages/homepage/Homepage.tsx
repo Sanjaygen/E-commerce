@@ -1,5 +1,5 @@
 import { Header } from "@/layout/header/Header";
-import { BoxStyled } from "./HomePage.Styled";
+import { BoxStyled } from "./HomePage.styled";
 import Intro from "../intro/Intro";
 import Brand from "../brand/Brand";
 import Products from "../products/Products";

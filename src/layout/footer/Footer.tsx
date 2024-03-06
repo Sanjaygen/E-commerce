@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.Styled";
+import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -29,13 +29,14 @@ export const Footer = () => {
         <Grid
           container
           spacing={2}
-          sx={{ margin: "auto", padding: "50px", marginLeft: "80px" }}
+          sx={{ margin: "auto", padding: {md:"50px"},paddingLeft:{xs:"50px"}, marginLeft: "80px" }}
         >
           <Grid
             item
             xs={12}
             sm={6}
             md={3}
+            lg={3.2}
             sx={{ marginBottom: { xs: "20px", sm: 0 } }}
           >
             <Typography
@@ -79,12 +80,12 @@ export const Footer = () => {
             xs={12}
             sm={6}
             md={3}
-            lg={1}
+            lg={1.5}
             sx={{
-              marginBottom: { xs: "20px", sm: 0, marginLeft: "50px" },
+              marginBottom: { xs: "20px", sm: 0,}, marginLeft: {xs:"50px",sm:"10px",md:"-40px",xl:"50px"},
             }}
           >
-            <CatTypography sx={{ color: "black", fontWeight: "600", mb: "10px" }}>
+            <CatTypography sx={{ color: "black", fontWeight: "600", mb: "10px", mt:{sm:"-20px",md:"0px"}}}>
               {footer?.[1]?.title}
             </CatTypography>
             <CatTypography sx={{ mb: "5px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[1]?.items?.[0]?.content}</CatTypography>
@@ -97,13 +98,14 @@ export const Footer = () => {
             item
             xs={12}
             sm={6}
-            md={3}
-            sx={{ marginBottom: { xs: "20px", sm: 0, marginLeft: "80px" } }}
+            md={5}
+            lg={4}
+            sx={{ marginBottom: { xs: "20px", sm: 0,} ,marginLeft: {xs:"80px",md:"30px"} }}
           >
-            <Grid container spacing={0} sx={{ marginLeft: "100px" }}>
-              <Grid item xs={8} md={6}>
+            <Grid container spacing={0} sx={{ marginLeft: "90px" }}>
+              <Grid item xs={8} md={6} lg={7}>
                 <AbTypography
-                  sx={{ color: "black", fontWeight: "600", mb: "10px" }}
+                  sx={{ color: "black", fontWeight: "600", mb: "10px", mt:{sm:"20px",md:"0px",lg:"5px"}}}
                 >
                   {footer?.[2]?.title}
                 </AbTypography>
@@ -120,16 +122,17 @@ export const Footer = () => {
             xs={12}
             sm={6}
             md={3}
-            sx={{ marginBottom: { xs: "20px", sm: 0 }, marginLeft: "50px" }}
+            lg={2.5}
+            sx={{ marginBottom: { xs: "20px", sm: 0 }, marginLeft: {xs:"50px",md:"50px",lg:"50px",xl:"0px"},marginTop:{xs:"0px",sm:"-20px",md:"0px",lg:"-15px",xl:"0px"}}}
           >
-            <CusTypography sx={{ color: "black", fontWeight: "600", mb: "10px" }}>
+            <CusTypography sx={{ color: "black", fontWeight: "600", mb: {sm:"-138px",md:"10px"} }}>
               {footer?.[3]?.title}
             </CusTypography>
-            <CusTypography sx={{ mb: "8px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[0]?.content}</CusTypography>
-            <CusTypography sx={{ mb: "8px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[1]?.content}</CusTypography>
-            <CusTypography sx={{ mb: "8px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[2]?.content}</CusTypography>
-            <CusTypography sx={{ mb: "8px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[3]?.content}</CusTypography>
-            <CusTypography sx={{ mb: "8px" }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[4]?.content}</CusTypography>
+            <CusTypography sx={{ mb: {sm:"-180px",md:"8px"} }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[0]?.content}</CusTypography>
+            <CusTypography sx={{ mb: {sm:"-215px",md:"8px"} }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[1]?.content}</CusTypography>
+            <CusTypography sx={{ mb: {sm:"-254px",md:"8px"} }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[2]?.content}</CusTypography>
+            <CusTypography sx={{ mb: {sm:"-290px",md:"8px"} }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[3]?.content}</CusTypography>
+            <CusTypography sx={{ mb: {sm:"-325px",md:"8px"} }} style={{ color: 'rgba(30, 40, 50, 1)'}}>{footer?.[3]?.items?.[4]?.content}</CusTypography>
           </Grid>
         </Grid>
       </StyledBox>

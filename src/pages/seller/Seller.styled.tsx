@@ -44,7 +44,6 @@ font-weight: 600;
     left: 100px;
     font-weight: 300;
     font-size: 40px;
-
   }
 `;
 
@@ -114,13 +113,21 @@ export const ImgDiv = styled('div')`
     gap: 20px; 
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     margin-left: 0px;
     margin-top: 10px;
     width: 1010px;
     height: 400px;
   }
-
+  @media (min-width: 1200px) and (max-width: 1439px){
+     margin-left:50px;
+  }
+ @media(min-width:1440px){
+     margin-left:150px;
+ }
+ @media(min-width:1450px){
+     margin-left:-40px;
+ }
 `;
  export const CustomCard = styled("div")`
   width: 282px;
@@ -203,7 +210,7 @@ cursor: pointer;
 
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     margin-right: 30px;
     text-decoration: none;
     color: black;
@@ -211,6 +218,18 @@ cursor: pointer;
     cursor: pointer;
 
   }
+  @media(min-width:1200px) and (max-width:1439px){
+    position:relative;
+    left:50px; 
+  }
+  @media(min-width:1440px){
+    position:relative;
+    left:150px;
+ }
+ @media(min-width:1450px){
+    position:relative;
+    left:-40px;
+ }
 `;
 export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
 margin-right: 0px;
@@ -251,6 +270,7 @@ color: ${({textColor}) => textColor || appColors['black']};
     bottom: 25px;
     font-size: 18px;
     left: 200px;
+    top:0px;
     gap: 10px;
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
@@ -260,13 +280,14 @@ color: ${({textColor}) => textColor || appColors['black']};
 
   }
   
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     float: right;
     height: 29px;
     position: relative;
     font-size: 12px;
     right: 22px;
     top: 0px;
+    left:-20px;
     gap: 10px;
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
@@ -275,6 +296,51 @@ color: ${({textColor}) => textColor || appColors['black']};
     }
 
   }
+  @media(min-width:1200px) and (max-width:1439px){
+    float: right;
+    height: 29px;
+    font-size: 12px;
+    position: relative;
+    left:-90px;
+    right: 22px;
+    top: 0px;
+    gap: 10px;
+    background: ${({ bgColor }) => bgColor || appColors["white"]};
+    color: ${({ textColor }) => textColor || appColors["black"]};
+    &:hover {
+      background-color: black;
+    }
+  }
+  @media(min-width:1440px){
+    float: right;
+    height: 29px;
+    font-size: 12px;
+    position: relative;
+    left:-170px;
+    right: 22px;
+    top: 0px;
+    gap: 10px;
+    background: ${({ bgColor }) => bgColor || appColors["white"]};
+    color: ${({ textColor }) => textColor || appColors["black"]};
+    &:hover {
+      background-color: black;
+    }
+ }
+ @media(min-width:1450px){
+  float: right;
+  height: 29px;
+  font-size: 12px;
+  position: relative;
+  left:30px;
+  right: 22px;
+  top: 0px;
+  gap: 10px;
+  background: ${({ bgColor }) => bgColor || appColors["white"]};
+  color: ${({ textColor }) => textColor || appColors["black"]};
+  &:hover {
+    background-color: black;
+  }
+ }
 `;
 
 export const HotTypography = styled(Typography)`
@@ -315,7 +381,7 @@ text-align: center;
   text-align: center;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     position: absolute;
      top: 40px;
      right: 175px;
@@ -353,7 +419,7 @@ text-align: center;
     text-align: center;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     position: absolute;
     top: 40px;
     left: 775px;

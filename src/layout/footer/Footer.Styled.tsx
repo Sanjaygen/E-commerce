@@ -5,18 +5,25 @@ import { Box, Button, Typography,  } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const ToppDiv = styled('div')`
-  height: 79vh;
+   height:98vh;
  @media (min-width: 390px) and (max-width: 767px) {
   top: -390px;
   position: relative;
+  height:0;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
+   height:0; 
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
- 
+@media (min-width: 1024px) and (max-width: 1200px) {
+    height:0;
+}
+@media (min-width:1440px){
+   height:0;
+}
+@media (min-width:1450px){
+   height:98vh;
 }
 `;
 
@@ -123,8 +130,8 @@ line-height: 28px;
 
 @media (min-width: 768px) and (max-width: 1023px) {
   display: flex;
-  position: relative;
-  left: 400px;
+  position: absolute;
+  left: 550px;
   bottom: 350px; 
   width: 100%
   font-size: 25px;
@@ -138,6 +145,7 @@ line-height: 28px;
   width: 100%
   font-size: 25px;
 }
+
   
 `;
 export const BottomContainer = styled(Box)<{ bgColor: string , textColor:string}>`
@@ -168,8 +176,6 @@ top: 160px;
   height: 52px;
   position: relative;
   top: 250px;
-  
- 
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -179,7 +185,10 @@ top: 160px;
   display: flex;
   height: 52px;
   position: relative;
- 
+  top:164px;
+}
+@media(min-width:1445px){
+   top: 290px;
 }
 
 `;
@@ -227,9 +236,18 @@ margin-left: 290px;
   margin-top: 10px;
   margin-left: 100px;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   margin-top: 10px;
   margin-left: 120px;
+}
+@media(min-width:1200px) and (max-width:1439px){
+   margin-left:250px;
+}
+@media(min-width:1440px) {
+   margin-left:400px;
+}
+@media(min-width:1450px){
+    margin-left:290px;
 }
 `;
 
@@ -249,10 +267,16 @@ export const StyledButton = styled(Button)`
   font-size: 13px;
 }
   
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   margin-left: 200px;
   color: white;
   font-size: 13px;
+}
+@media(min-width:1200px){
+   margin-left:340px;
+}
+@media (min-width:1440px){
+   margin-left:400px;
 }
 `;
 export const StyledIcon = styled(FontAwesomeIcon)`

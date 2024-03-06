@@ -44,10 +44,10 @@ import { Box, Button, Typography } from "@mui/material";
 
   
   @media (min-width: 1024px) and (max-width: 1440px) {
-    left: -20px;
     position:relative;
     top:20px;
     width: 500px;
+    left:0px;
   }
 
 `;

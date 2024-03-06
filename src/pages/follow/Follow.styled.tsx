@@ -152,12 +152,20 @@ margin-left: 480px;
 
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     width: 400px;
     height: 32px;
     margin-top: 22px;
     margin-left: 240px;
-
+  }
+  @media (min-width: 1200px) and (max-width: 1439px){
+    margin-left: 320px;
+  }
+  @media(min-width:1440px){
+    margin-left:420px;
+  }
+  @media(min-width:1450px){
+    margin-left:480px;
   }
 `;
 
