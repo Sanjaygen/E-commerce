@@ -1,5 +1,4 @@
 import { Header } from "@/layout/header/Header";
-import { BoxStyled } from "./HomePage.Styled";
 import Intro from "../intro/Intro";
 import Brand from "../brand/Brand";
 import Products from "../products/Products";
@@ -9,6 +8,8 @@ import Seller from "../seller/Seller";
 import { Follow } from "../follow/Follow";
 import { Footer } from "@/layout/footer/Footer";
 import { Banner } from "../banner/Banner";
+import { BoxStyled } from "./HomePage.styled";
+
 
 const Homepage = () => {
   const { data } = useQuery(QUERY);

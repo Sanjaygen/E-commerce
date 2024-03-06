@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, styled } from "@mui/material"
-import { BoxContainer, ContentWrapper, StyledButton, TextPara } from "./Banner.Styled"
+import { BoxContainer, ContentWrapper, StyledButton, TextPara } from "./Banner.styled"
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
