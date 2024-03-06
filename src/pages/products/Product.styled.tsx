@@ -80,7 +80,7 @@ export const StyledLink = styled(Link)`
 
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     // margin-right: 30px;
     text-decoration: none;
     color: black;
@@ -89,7 +89,14 @@ export const StyledLink = styled(Link)`
     left: -200px;
 
   }
-
+  @media (min-width: 1200px) and (max-width: 1439px){
+     position:relative;
+     left:-140px;
+  }
+  @media(min-width:1440px) and (max-width:1449){
+     position:relative;
+     left:-100px;
+  }
 `;
 export const StyledButton = styled(Button)<{
   bgColor: string;
@@ -144,13 +151,27 @@ export const StyledButton = styled(Button)<{
 
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     float: right;
     height: 29px;
     position: relative;
     bottom: 0px;
     font-size: 15px;
-    left: 50px;
+    left: -40px;
+    gap: 10px;
+    background: ${({ bgColor }) => bgColor || appColors["white"]};
+    color: ${({ textColor }) => textColor || appColors["black"]};
+    &:hover {
+      background-color: black;
+    }
+  }
+   @media (min-width: 1200px) and (max-width: 1440px) {
+    float: right;
+    height: 29px;
+    position: relative;
+    bottom: 0px;
+    font-size: 15px;
+    left: -40px;
     gap: 10px;
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
@@ -159,7 +180,6 @@ export const StyledButton = styled(Button)<{
     }
 
   }
-
 `;
 
 export const CommonDiv = styled("div")`
@@ -267,7 +287,7 @@ export const BoxContainer = styled("div")`
   @media (min-width: 1024px) and (max-width: 1440px) {
     margin-left: 20px;
     margin-top: 130px;
-    width: 69%;
+    width: 80%;
    }
 `;
 
@@ -292,11 +312,20 @@ export const FirstDiv = styled('div')`
   }
 
   
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     margin-left: 0px;
     margin-top: 10px;
     width: 1010px;
     height: 400px;
+  }
+  @media (min-width: 1200px) and (max-width: 1439px){
+    margin-left:60px;
+  }
+  @media(min-width:1440px){
+     margin-left:200px;
+  }
+  @media(min-width:1450px){
+     margin-left:0px;
   }
 
 `;
@@ -319,11 +348,20 @@ position: relative;
     gap: 20px;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     margin-left: 0px;
     margin-top: 10px;
     width: 1010px;
     height: 400px;
+  }
+  @media (min-width: 1200px) and (max-width: 1439px){
+    margin-left:60px;
+  }
+ @media(min-width:1440px){
+     margin-left:200px;
+  }
+  @media(min-width:1450px){
+     margin-left:0px;
   }
 
 `;
@@ -356,8 +394,8 @@ export const SaleTypography = styled(Typography)`
   text-align: center;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
-    position: absolute;
+  @media (min-width: 1024px) and (max-width: 1199px) {
+     position: absolute;
      top: 40px;
      right: 176px;
      background-color: black;  
@@ -365,6 +403,11 @@ export const SaleTypography = styled(Typography)`
      width: 60px;
      text-align: center;
      }
+  @media (min-width: 1200px) and (max-width: 1440px){
+     position: absolute;
+     top: 40px;
+     right: 206px;
+  } 
 `;
 
 export const HotTypography = styled(Typography)`
@@ -405,7 +448,7 @@ export const TypographySale = styled(Typography)`
     text-align: center;
   }
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     position: absolute;
     top: 40px;
     left: 269px;
@@ -413,5 +456,8 @@ export const TypographySale = styled(Typography)`
     color: white;
     width: 60px;
     text-align: center;
+  }
+  @media(min-width:1200px) and (max-width:1440px){
+     
   }
 `;

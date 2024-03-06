@@ -34,7 +34,12 @@ const Brand = () => {
 
       <StyledTypography variant="h5">{categorey?.[0]?.title}</StyledTypography>
       <BoxStyled>
-        <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }} justifyContent="center" alignItems="center" flexWrap="wrap">
+        <Box sx={{
+            display:"flex",
+            flexDirection:{ xs: 'column', md: 'column',lg:"row"},
+            justifyContent:"center",
+            alignItems:"center",
+        }}>
           <LadyimgDiv>
             <img
               src={

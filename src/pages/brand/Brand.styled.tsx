@@ -152,11 +152,19 @@ export const StyledTypography = styled(Typography)`
   }
 
   
-  @media (min-width: 1024px) and (max-width: 1440px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     position: relative;
     left: -390px;  
     top: 100px;    
     font-size: 28px; 
+  }
+  @media (min-width: 1200px) and (max-width: 1439px){
+     left: -650px;
+     top:-20px;
+  }
+  @media(min-width:1440px){
+     top:-120px;
+     left: -650px;
   }
 `;
 
