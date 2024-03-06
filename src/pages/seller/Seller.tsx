@@ -40,7 +40,7 @@ const Seller = () => {
           <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
             {silderProduct?.[0]?.navbar?.[3]?.title}
           </StyledLink>
-          <StyledButton variant="contained" bgColor={sellerButton} textColor={sellerText} >
+          <StyledButton variant="contained" bgcolor={sellerButton} textcolor={sellerText} >
             {silderProduct?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
         </Box>

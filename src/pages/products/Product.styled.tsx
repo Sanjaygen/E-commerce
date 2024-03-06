@@ -99,8 +99,8 @@ export const StyledLink = styled(Link)`
   }
 `;
 export const StyledButton = styled(Button)<{
-  bgColor: string;
-  textColor: string;
+  bgcolor: string;
+  textcolor: string;
 }>`
   margin-right: 0px;
   float: right;
@@ -110,8 +110,8 @@ export const StyledButton = styled(Button)<{
   font-size: 12px; 
   left: 50px; 
   gap: 10px;
-  background: ${({ bgColor }) => bgColor || appColors["white"]};
-  color: ${({ textColor }) => textColor || appColors["black"]};
+  background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+  color: ${({ textcolor }) => textcolor || appColors["black"]};
   &:hover {
     background-color: black;
   }
@@ -127,8 +127,8 @@ export const StyledButton = styled(Button)<{
     left: 100px;
     width: 80px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -143,8 +143,8 @@ export const StyledButton = styled(Button)<{
     font-size: 18px;
     left: 200px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -159,8 +159,8 @@ export const StyledButton = styled(Button)<{
     font-size: 15px;
     left: -40px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -173,8 +173,8 @@ export const StyledButton = styled(Button)<{
     font-size: 15px;
     left: -40px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }

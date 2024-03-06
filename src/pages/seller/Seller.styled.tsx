@@ -231,15 +231,15 @@ cursor: pointer;
     left:-40px;
  }
 `;
-export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
+export const StyledButton = styled(Button)<{bgcolor: string, textcolor: string}>`
 margin-right: 0px;
 float: right;
 height: 25px;
 position: relative;
 bottom: 10px;
 left: 70px;
-background: ${({bgColor}) => bgColor || appColors['white']};
-color: ${({textColor}) => textColor || appColors['black']};
+background: ${({bgcolor}) => bgcolor || appColors['white']};
+color: ${({textcolor}) => textcolor || appColors['black']};
 &:hover {
     background-color: black;
 }
@@ -255,8 +255,8 @@ color: ${({textColor}) => textColor || appColors['black']};
     left: 100px;
     width: 82px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -272,8 +272,8 @@ color: ${({textColor}) => textColor || appColors['black']};
     left: 200px;
     top:0px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -289,8 +289,8 @@ color: ${({textColor}) => textColor || appColors['black']};
     top: 0px;
     left:-20px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -305,8 +305,8 @@ color: ${({textColor}) => textColor || appColors['black']};
     right: 22px;
     top: 0px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -320,8 +320,8 @@ color: ${({textColor}) => textColor || appColors['black']};
     right: 22px;
     top: 0px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: black;
     }
@@ -335,8 +335,8 @@ color: ${({textColor}) => textColor || appColors['black']};
   right: 22px;
   top: 0px;
   gap: 10px;
-  background: ${({ bgColor }) => bgColor || appColors["white"]};
-  color: ${({ textColor }) => textColor || appColors["black"]};
+  background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+  color: ${({ textcolor }) => textcolor || appColors["black"]};
   &:hover {
     background-color: black;
   }
