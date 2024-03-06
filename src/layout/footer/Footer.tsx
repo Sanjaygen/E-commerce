@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.styled";
+import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.Styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -136,7 +136,7 @@ export const Footer = () => {
           </Grid>
         </Grid>
       </StyledBox>
-      <BottomContainer bgColor={bottomBg} textColor={bottomText}>
+      <BottomContainer bgcolor={bottomBg} textcolor={bottomText}>
         <TopicDiv>
           {bottom?.[0]?.content}
         </TopicDiv>

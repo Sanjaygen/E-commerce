@@ -19,7 +19,7 @@ const Homepage = () => {
 
   return (
     <>
-      <BoxStyled bgColor={homeBack} textColor={homeText}>
+      <BoxStyled bgcolor={homeBack} textcolor={homeText}>
         <Header />  
         <Intro />
       </BoxStyled>

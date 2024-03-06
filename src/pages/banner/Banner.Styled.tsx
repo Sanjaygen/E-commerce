@@ -33,11 +33,11 @@ Height:187px;
     height:60px;
 }
 `;
-export const StyledButton= styled(Button)<{bgColor: string, textColor: string}>`
+export const StyledButton= styled(Button)<{bgcolor: string, textcolor: string}>`
 font-size: 23px;
 font-weight: 400;
-background: ${({bgColor}) => bgColor || appColors['white']};
-color: ${({textColor}) => textColor || appColors['black']};
+background: ${({bgcolor}) => bgcolor || appColors['white']};
+color: ${({textcolor}) => textcolor || appColors['black']};
 text-transform: capitalize;
 font-family:Roboto;
 margin-top: 50px;

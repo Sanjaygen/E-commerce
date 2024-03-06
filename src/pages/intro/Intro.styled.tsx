@@ -218,13 +218,13 @@ export const TypographyContent = styled(Typography)`
 
 
 export const StyledButton = styled(Button)<{
-  bgColor: string;
-  textColor: string;
+  bgcolor: string;
+  textcolor: string;
 }>`
   margin-top: 40px;
   margin-left: 10px;
-  background: ${({ bgColor }) => bgColor || appColors["white"]};
-  color: ${({ textColor }) => textColor || appColors["black"]};
+  background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+  color: ${({ textcolor }) => textcolor || appColors["black"]};
   line-height: 40px;
   gap: 10px;
   width: 170px;
@@ -238,8 +238,8 @@ export const StyledButton = styled(Button)<{
   @media (min-width: 390px) and (max-width: 767px) {
     margin-top: 40px;
   left: 5px;
-  background: ${({ bgColor }) => bgColor || appColors["white"]};
-  color: ${({ textColor }) => textColor || appColors["black"]};
+  background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+  color: ${({ textcolor }) => textcolor || appColors["black"]};
   gap: 10px;
   width: 150px;
   position: relative;
@@ -253,8 +253,8 @@ export const StyledButton = styled(Button)<{
   @media (min-width: 768px) and (max-width: 1023px) {
     margin-top: 5px;
     left: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     gap: 10px;
     width: 150px;
     position: relative;
