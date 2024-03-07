@@ -4,7 +4,7 @@ import Homepage from "@/pages/homepage/Homepage";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:1337/graphql',
+  uri: 'https://e-commerce-strapi-app.onrender.com/graphql',
   cache: new InMemoryCache
 })
 console.log('apichecking',process.env);
