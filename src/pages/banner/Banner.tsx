@@ -1,5 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+<<<<<<< HEAD
 import { Box, styled } from "@mui/material";
+=======
+import { Box, styled } from "@mui/material"
+import { BoxContainer, ContentWrapper, StyledButton, TextPara } from "./Banner.Styled"
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
@@ -17,7 +22,7 @@ export const Banner = () => {
             <ContentWrapper>
                 <img src={api + brandBanner?.[0]?.image?.data?.[0]?.attributes?.url} alt="no Zara" width={'141px'} height={'71px'} />
                 <TextPara>{brandBanner?.[0]?.description}</TextPara>
-                <StyledButton variant='contained' bgColor={bannerButton} textColor={bannerText}>
+                <StyledButton variant='contained' bgcolor={bannerButton} textcolor={bannerText}>
                     {brandBanner?.[0]?.button?.[0]?.title}
                 </StyledButton>
             </ContentWrapper>

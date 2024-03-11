@@ -1,1 +1,1 @@
-export const api = 'http://localhost:1337'
+export const api = 'https://e-commerce-strapi-app.onrender.com'

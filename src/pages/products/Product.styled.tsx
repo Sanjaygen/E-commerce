@@ -144,8 +144,8 @@ export const StyledLink1 = styled(Link)`
   }
 `;
 export const StyledButton = styled(Button)<{
-  bgColor: string;
-  textColor: string;
+  bgcolor: string;
+  textcolor: string;
 }>`
   margin-right: 0px;
   float: right;
@@ -155,10 +155,17 @@ export const StyledButton = styled(Button)<{
   font-size: 12px; 
   left: 50px; 
   gap: 10px;
+<<<<<<< HEAD
   background: ${({ bgColor }) => bgColor || appColors["white"]};
   color: ${({ textColor }) => textColor || appColors["black"]};
   &:hover{
     background-color:#FF6F61;
+=======
+  background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+  color: ${({ textcolor }) => textcolor || appColors["black"]};
+  &:hover {
+    background-color: black;
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
   }
 
   
@@ -172,8 +179,8 @@ export const StyledButton = styled(Button)<{
     left: 100px;
     width: 80px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: #FF6F61;
     }
@@ -188,8 +195,8 @@ export const StyledButton = styled(Button)<{
     font-size: 18px;
     left: 200px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: #FF6F61;
     }
@@ -204,8 +211,8 @@ export const StyledButton = styled(Button)<{
     font-size: 15px;
     left: -40px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: #FF6F61;
     }
@@ -218,8 +225,8 @@ export const StyledButton = styled(Button)<{
     font-size: 15px;
     left: -50px;
     gap: 10px;
-    background: ${({ bgColor }) => bgColor || appColors["white"]};
-    color: ${({ textColor }) => textColor || appColors["black"]};
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
       background-color: #FF6F61;
     }

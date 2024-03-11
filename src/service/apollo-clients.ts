@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const createApolloClient = () => {
   return new ApolloClient({
-    uri: "http://localhost:1337/graphql",
+    uri: "https://e-commerce-strapi-app.onrender.com/graphql",
     cache: new InMemoryCache(),
   });
 };

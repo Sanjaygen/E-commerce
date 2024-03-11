@@ -1,5 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Button, Grid, Typography } from "@mui/material";
+<<<<<<< HEAD
+=======
+import { AbTypography, BottomContainer, CatTypography, CusTypography, DivWrapper, LogDiv, StyledBox, StyledButton, StyledIcon, TopicDiv, ToppDiv } from "./Footer.Styled";
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -136,7 +140,7 @@ export const Footer = () => {
           </Grid>
         </Grid>
       </StyledBox>
-      <BottomContainer bgColor={bottomBg} textColor={bottomText}>
+      <BottomContainer bgcolor={bottomBg} textcolor={bottomText}>
         <TopicDiv>
           {bottom?.[0]?.content}
         </TopicDiv>

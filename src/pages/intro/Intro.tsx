@@ -49,7 +49,7 @@ const Intro = () => {
               <TypographyContent>
                 {topmain?.[0].description}
               </TypographyContent>
-              <StyledButton variant="contained" bgColor={introButton} textColor={introText}>
+              <StyledButton variant="contained" bgcolor={introButton} textcolor={introText}>
                 {" "}
                 <FontAwesomeIcon icon={faShoppingBag} scale={"1.25x"} />
                 {topmain?.[0].topbutton?.[0]?.title}

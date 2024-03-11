@@ -1,5 +1,5 @@
 import { Header } from "@/layout/header/Header";
-import { BoxStyled } from "./HomePage.styled";
+import { BoxStyled } from "./HomePage.Styled";
 import Intro from "../intro/Intro";
 import Brand from "../brand/Brand";
 import Products from "../products/Products";
@@ -19,7 +19,7 @@ const Homepage = () => {
 
   return (
     <>
-      <BoxStyled bgColor={homeBack} textColor={homeText}>
+      <BoxStyled bgcolor={homeBack} textcolor={homeText}>
         <Header />  
         <Intro />
       </BoxStyled>

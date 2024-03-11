@@ -260,10 +260,10 @@ cursor:pointer;
 }
   
 `;
-export const BottomContainer = styled(Box)<{ bgColor: string , textColor:string}>`
+export const BottomContainer = styled(Box)<{ bgcolor: string , textcolor:string}>`
 border: 1px solid black;
-background: ${({bgColor}) => bgColor || appColors['white']};
-color: ${({textColor}) => textColor || appColors['black']};
+background: ${({bgcolor}) => bgcolor || appColors['white']};
+color: ${({textcolor}) => textcolor || appColors['black']};
 display: flex;
 height: 52px;
 position: relative;
@@ -272,8 +272,8 @@ top: 160px;
 
 @media (min-width: 390px) and (max-width: 767px) {
   border: 1px solid black;
-  background: ${({bgColor}) => bgColor || appColors['white']};
-  color: ${({textColor}) => textColor || appColors['black']};
+  background: ${({bgcolor}) => bgcolor || appColors['white']};
+  color: ${({textcolor}) => textcolor || appColors['black']};
   display: flex;
   height: 52px;
   margin-top:30px;
@@ -282,8 +282,8 @@ top: 160px;
 
 @media (min-width: 768px) and (max-width: 1023px) {
   border: 1px solid black;
-  background: ${({bgColor}) => bgColor || appColors['white']};
-  color: ${({textColor}) => textColor || appColors['black']};
+  background: ${({bgcolor}) => bgcolor || appColors['white']};
+  color: ${({textcolor}) => textcolor || appColors['black']};
   display: flex;
   height: 52px;
   position: relative;
@@ -292,8 +292,8 @@ top: 160px;
 
 @media (min-width: 1024px) and (max-width: 1440px) {
   border: 1px solid black;
-  background: ${({bgColor}) => bgColor || appColors['white']};
-  color: ${({textColor}) => textColor || appColors['black']};
+  background: ${({bgcolor}) => bgcolor || appColors['white']};
+  color: ${({textcolor}) => textcolor || appColors['black']};
   display: flex;
   height: 52px;
   position: relative;

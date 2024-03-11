@@ -36,8 +36,13 @@ const Products = () => {
           </StyledLink1>
           <StyledLink1 href={"#"}>
             {productitems?.[0]?.navbar?.[3]?.title}
+<<<<<<< HEAD
           </StyledLink1>
           <StyledButton variant="contained" bgColor={filterButton} textColor={filterText}>
+=======
+          </StyledLink>
+          <StyledButton variant="contained" bgcolor={filterButton} textcolor={filterText}>
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
             <FontAwesomeIcon icon={faFilter} scale={"1.25x"} />
             {productitems?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
