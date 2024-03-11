@@ -11,6 +11,7 @@ export const BoxStyled = styled(Box)`
   @media (min-width: 768px) and (max-width: 1023px) {
     background-color: transparent;
      position: relative;
+     z-index:999;
   }
 
   @media (min-width: 1024px) and (max-width: 1440px) {
@@ -64,7 +65,7 @@ export const FirstTypography = styled(Typography)`
     font-size: 28px;
     position: relative;
   }
-  @media (min-width: 1200px) and (max-width:1439){
+  @media (min-width: 1200px){
      left:450px;
   }
   @media(min-width:1440px){
@@ -84,6 +85,7 @@ export const IconBtn = styled(Box)`
     display: block;
     position: relative;
     left: 50px;
+    z-index:999;
   }
   @media (min-width: 1240px) {
     display: block;
@@ -104,8 +106,12 @@ export const LinkStyled = styled(Link)`
   color: black;
   text-decoration: none !important;
   cursor: pointer;
+  &:hover{
+    color:#FF6F61;
+  }
   @media (min-width: 390px) and (max-width: 767px) {
     position: relative;
+    z-index:999;
     left: 20px;
     display: block;
     cursor: pointer;

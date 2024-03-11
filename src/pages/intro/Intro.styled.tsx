@@ -9,8 +9,8 @@ import { Box, Button, Typography } from "@mui/material";
   background-color: rgba(30, 40, 50, 0.05);
   height: 1100px;
   top: -280px;
-  z-index:-1;
   position: relative;
+  zIndex:999;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -59,6 +59,7 @@ import { Box, Button, Typography } from "@mui/material";
 
    @media (min-width: 390px) and (max-width: 767px) {
     position:relative;
+    zIndex:999;
     left: -190px;
     top: 95px;
     height: 25px;
@@ -231,8 +232,8 @@ export const StyledButton = styled(Button)<{
   font-size: 18px;
   font-size: 1rem;
 
-  &:hover {
-    background-color: black;
+  &:hover{
+    background-color:#FF6F61;
   }
 
   @media (min-width: 390px) and (max-width: 767px) {
@@ -243,10 +244,11 @@ export const StyledButton = styled(Button)<{
   gap: 10px;
   width: 150px;
   position: relative;
+  zIndex:999;
   font-size: 1rem;
 
   &:hover {
-    background-color: black;
+    background-color: #FF6F61;
   }
   }
 
@@ -261,8 +263,11 @@ export const StyledButton = styled(Button)<{
     font-size: 1rem;
   
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
+  }
+  @media(min-width:1024px) and (max-width:1199px){
+     left:0;
   }
 `;
 export const FrameStyled = styled("div")`

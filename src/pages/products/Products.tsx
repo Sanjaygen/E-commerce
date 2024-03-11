@@ -5,8 +5,8 @@ import {
   Typography,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import { BoxContainer, BoxStyled, CommonDiv, CustomCard, FirstDiv, HotTypography, ProductContent, SaleTypography, SecDiv, StyledButton, StyledLink, StyledTypography, TopTypography, TypographySale } from "./Product.styled";
+import { faBagShopping, faFilter, faHeart, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { BoxContainer, BoxStyled, CommonDiv, CustomCard, DetailDiv, FirstDiv, HotTypography, ProductContent, SaleTypography, SecDiv, StyledButton, StyledLink, StyledLink1, StyledTypography, TopTypography, TypographyIcon, TypographySale } from "./Product.styled";
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
@@ -28,21 +28,20 @@ const Products = () => {
             href={"#"}>
             <b>{productitems?.[0]?.navbar?.[0]?.title}</b>
           </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          <StyledLink1 href={"#"}>
             {productitems?.[0]?.navbar?.[1]?.title}
-          </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          </StyledLink1>
+          <StyledLink1 href={"#"}>
             {productitems?.[0]?.navbar?.[2]?.title}
-          </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          </StyledLink1>
+          <StyledLink1 href={"#"}>
             {productitems?.[0]?.navbar?.[3]?.title}
-          </StyledLink>
+          </StyledLink1>
           <StyledButton variant="contained" bgColor={filterButton} textColor={filterText}>
             <FontAwesomeIcon icon={faFilter} scale={"1.25x"} />
             {productitems?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
         </BoxStyled>
-
         <CommonDiv>
           <FirstDiv>
             <CustomCard>
@@ -52,6 +51,12 @@ const Products = () => {
                   alt="Brand 1"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
@@ -69,6 +74,12 @@ const Products = () => {
                   alt="Brand 2"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[1]?.title}
                 </StyledTypography>
@@ -86,6 +97,12 @@ const Products = () => {
                   alt="Brand 3"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[2]?.title}
                 </StyledTypography>
@@ -97,12 +114,18 @@ const Products = () => {
             </CustomCard>
 
             <CustomCard>
-              <CardContent style={{ position: 'relative' }}>
+              <CardContent>
                 <img
                   src={api + productitems?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <SaleTypography> SALE</SaleTypography>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[3]?.title}
@@ -123,6 +146,12 @@ const Products = () => {
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <HotTypography> HOT </HotTypography>
                 <StyledTypography variant="h6">{productitems?.[0]?.cards?.[4]?.title}</StyledTypography>
                 <ProductContent>
@@ -137,10 +166,16 @@ const Products = () => {
                 <img
                   src={api + productitems?.[0]?.cards?.[5]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
-                  style={{ width: "95%", position: 'relative'}}
+                  style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <TypographySale> SALE</TypographySale>
-                <div style={{ position: 'relative',top: '10px' }}>
+                <div style={{ position: 'relative'}}>
                   <StyledTypography variant="h6">
                     {productitems?.[0]?.cards?.[5]?.title}
                   </StyledTypography>
@@ -159,6 +194,12 @@ const Products = () => {
                   alt="Brand 7"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <div style={{ position: 'relative' }}>
                   <StyledTypography variant="h6">{productitems?.[0]?.cards?.[6]?.title}</StyledTypography>
                   <ProductContent>
@@ -176,6 +217,12 @@ const Products = () => {
                   alt="Brand 8"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <div style={{ position: 'relative', }}>
                   <StyledTypography variant="h3" >
                     {productitems?.[0]?.cards?.[7]?.title}

@@ -6,10 +6,12 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import { BoxContainer, BoxStyled, CustomCard, HotTypography, ImgDiv, ProductContent, RowDiv, SaleTypography, StyledButton, StyledLink, StyledTypography, TopTypography, TypographySale } from "./Seller.styled";
+import { BoxContainer, BoxStyled, CustomCard, DetailDiv, HotTypography, ImgDiv, ProductContent, RowDiv, SaleTypography, StyledButton, StyledLink, StyledLink1, StyledTypography, TopTypography, TypographyIcon, TypographySale } from "./Seller.styled";
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faBagShopping, faHeart, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Seller = () => {
   const { data } = useQuery(QUERY);
@@ -31,15 +33,15 @@ const Seller = () => {
           <StyledLink  href={"#"}>
             <b>{silderProduct?.[0]?.navbar?.[0]?.title}</b>
           </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          <StyledLink1 href={"#"}>
             {silderProduct?.[0]?.navbar?.[1]?.title}
-          </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          </StyledLink1>
+          <StyledLink1 href={"#"}>
             {silderProduct?.[0]?.navbar?.[2]?.title}
-          </StyledLink>
-          <StyledLink href={"#"}style={{ color: 'rgba(0, 0, 0, 0.5)',fontWeight: 'bold' }}>
+          </StyledLink1>
+          <StyledLink1 href={"#"}>
             {silderProduct?.[0]?.navbar?.[3]?.title}
-          </StyledLink>
+          </StyledLink1>
           <StyledButton variant="contained" bgColor={sellerButton} textColor={sellerText} >
             {silderProduct?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
@@ -54,12 +56,18 @@ const Seller = () => {
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <HotTypography> HOT</HotTypography>
                 <StyledTypography variant="h6">
                   {silderProduct?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
                 <ProductContent>
-                  <Typography variant="body2"style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{silderProduct?.[0]?.cards?.[0]?.content}</Typography>
+                  <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{silderProduct?.[0]?.cards?.[0]?.content}</Typography>
                   <Typography variant="body2" sx={{ marginRight: "20px" }}style={{ fontWeight: 'bold' }}>
                   {silderProduct?.[0]?.cards?.[0]?.prize}
                   </Typography>
@@ -75,10 +83,15 @@ const Seller = () => {
                   style={{
                     width: "95%",
                     marginBottom: "10px",
-                    position: "relative"
-    
+                    position: "relative"    
                   }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <StyledTypography variant="h6">
                 {silderProduct?.[0]?.cards?.[1]?.title}
                 </StyledTypography>
@@ -92,7 +105,7 @@ const Seller = () => {
             </CustomCard>
 
             <CustomCard>
-              <CardContent style={{ position: "relative" }}>
+              <CardContent>
                 <img
                   src={api+silderProduct?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
@@ -100,9 +113,14 @@ const Seller = () => {
                     width: "95%",
                     marginBottom: "10px",
                     position: "relative"
-                    
                   }}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <SaleTypography> SALE </SaleTypography>
                 <StyledTypography variant="h6">
                 {silderProduct?.[0]?.cards?.[2]?.title}
@@ -121,11 +139,17 @@ const Seller = () => {
                 <img
                   src={api+silderProduct?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
-                  style={{ width: "95%", position: "relative"}}
+                  style={{ width: "95%",marginBottom: "10px", position: "relative"}}
                 />
+                <DetailDiv>
+                    <FontAwesomeIcon icon={faHeart} />
+                    <div style={{position:"relative",left:"20px"}}> 
+                    <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                </DetailDiv>
                 <TypographySale> SALE</TypographySale>
                 <div
-                  style={{ position: "relative", top: "10px" }}
+                  style={{ position: "relative"}}
                 >
                   <StyledTypography variant="h6">
                   {silderProduct?.[0]?.cards?.[3]?.title}

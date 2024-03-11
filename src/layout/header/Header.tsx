@@ -39,7 +39,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             scale={"1.25x"}
-            style={{ position: "relative", right: "20px" }}
+            style={{ position: "relative", right: "20px"}}
           />
           <HeadLineStyled>
             {/* <img
@@ -61,15 +61,15 @@ export const Header = () => {
           <FontAwesomeIconStyled
             icon={faBars}
             scale={"1.25x"}
-            style={{ position: "relative", right: "20px" }}
+            style={{ position: "relative", right: "20px",zIndex:"999" }}
             onClick={toggleBar}
           />
           <IconBtn className="btn-icon" sx={{ marginLeft: "auto" }}>
-            <Button variant="text" color="inherit" sx={{ gap: "8px" }}>
+            <Button color="inherit" sx={{ gap: "8px",":hover":{color:"#FF6F61"}}}>
               <FontAwesomeIcon icon={faUser} scale={"1.25x"} />
               {header?.[0]?.headerbutton?.[0]?.title}
             </Button>
-            <Button variant="text" color="inherit" sx={{ gap: "8px" }}>
+            <Button  color="inherit" sx={{ gap: "8px",":hover":{color:"#FF6F61"} }}>
               {" "}
               <FontAwesomeIcon icon={faShoppingBag} scale={"1.25x"} />
               {header?.[0]?.headerbutton?.[1]?.title}
@@ -83,7 +83,7 @@ export const Header = () => {
             fontSize: "16px",
             color: "black",
             justifyContent: "space-between",
-            marginTop: "20px",
+            marginTop: "20px"
           }}
         >
           <LinkStyled href="#" >{navbar?.[0]?.title}</LinkStyled>

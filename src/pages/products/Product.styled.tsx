@@ -98,6 +98,51 @@ export const StyledLink = styled(Link)`
      left:-100px;
   }
 `;
+
+export const StyledLink1 = styled(Link)`
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-weight:bold;
+  &:hover{
+     color:#FF6F61;
+  }
+
+  @media (min-width: 390px) and (max-width: 767px) {
+    margin-right: 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+  }
+
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    // margin-right: 30px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+    left: -200px;
+
+  }
+  @media (min-width: 1200px) and (max-width: 1439px){
+     position:relative;
+     left:-140px;
+  }
+  @media(min-width:1440px) and (max-width:1449){
+     position:relative;
+     left:-100px;
+  }
+`;
 export const StyledButton = styled(Button)<{
   bgColor: string;
   textColor: string;
@@ -112,8 +157,8 @@ export const StyledButton = styled(Button)<{
   gap: 10px;
   background: ${({ bgColor }) => bgColor || appColors["white"]};
   color: ${({ textColor }) => textColor || appColors["black"]};
-  &:hover {
-    background-color: black;
+  &:hover{
+    background-color:#FF6F61;
   }
 
   
@@ -130,7 +175,7 @@ export const StyledButton = styled(Button)<{
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
   }
 
@@ -146,7 +191,7 @@ export const StyledButton = styled(Button)<{
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
 
   }
@@ -162,7 +207,7 @@ export const StyledButton = styled(Button)<{
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
   }
    @media (min-width: 1200px) and (max-width: 1440px) {
@@ -171,12 +216,12 @@ export const StyledButton = styled(Button)<{
     position: relative;
     bottom: 0px;
     font-size: 15px;
-    left: -40px;
+    left: -50px;
     gap: 10px;
     background: ${({ bgColor }) => bgColor || appColors["white"]};
     color: ${({ textColor }) => textColor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
 
   }
@@ -199,10 +244,47 @@ export const CommonDiv = styled("div")`
     justify-content: space-between;
   }
 `;
+export const DetailDiv = styled("div")`
+    visibility:hidden;
+    display:flex;
+    background:#1E2832;
+    color:#fff;
+    padding:10px;
+    width:21%;
+    position:absolute;
+    margin-top:-52px;
+    display:flex;
+    cursor:pointer;
+    @media (min-width: 390px) and (max-width: 767px){
+       width:85%;
+    }
+    @media (min-width: 768px) and (max-width: 1023px){
+       width:40%;
+    }
+    @media (min-width: 1024px) and (max-width: 1199px){
+       width:20.5%;
+    }
+    
+`
+export const TypographyIcon = styled(Link)`
+    margin-left:40%;
+    color:#fff;
+    text-decoration:none;
+    &:hover{
+      color:#FF6F61;
+    }
+    @media (min-width: 1024px) and (max-width: 1199px){
+      margin-left:30%;
+    }
+`
 
 export const CustomCard = styled("div")`
   width: 282px;
-
+  &:hover{
+    ${DetailDiv}{
+        visibility:visible;
+    }
+  }
   @media (min-width: 390px) and (max-width: 767px) {
     width: 282px;
  
