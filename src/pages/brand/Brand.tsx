@@ -1,12 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import {
   BoxStyled,
+  CoatDiv,
+  HoverDiv,
   ImageStyled,
+  JacketDiv,
+  LadyDiv,
   LadyimgDiv,
   LogoDiv,
   MainDiv,
+  PantsDiv,
   SaleTypography,
+  ShirtDiv,
   StyledDiv,
   StyledTypography,
 } from "./Brand.styled";
@@ -14,10 +20,12 @@ import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
 
+
 const Brand = () => {
   const { data } = useQuery(QUERY);
   const { homes } = data || {};
   const { brands, categorey } = homes?.data?.[0]?.attributes || {};
+  console.log(categorey, 'categorey');
 
   return (
     <MainDiv>
@@ -35,10 +43,10 @@ const Brand = () => {
       <StyledTypography variant="h5">{categorey?.[0]?.title}</StyledTypography>
       <BoxStyled>
         <Box sx={{
-            display:"flex",
-            flexDirection:{ xs: 'column', md: 'column',lg:"row"},
-            justifyContent:"center",
-            alignItems:"center",
+          display: "flex",
+          flexDirection: { xs: 'column', md: 'column', lg: "row" },
+          justifyContent: "center",
+          alignItems: "center",
         }}>
           <LadyimgDiv>
             <img
@@ -56,53 +64,90 @@ const Brand = () => {
                 marginRight: "auto",
               }}
             />
+            <LadyDiv>
+              <Typography>Manto</Typography>
+              <Typography>83 products</Typography>
+            </LadyDiv>
           </LadyimgDiv>
-          
           <StyledDiv>
-          <SaleTypography>SALE</SaleTypography>
-            {[1, 2, 3, 4].map((index) =>
-              index % 2 === 0 ? ( 
-                <div
-                  key={index}
-                  style={{ display: "flex", marginBottom: "15px" }}
-                >
-                  
-                  <div style={{ flex: 1, marginRight: "15px" }}>
-                    <img
-                      src={
-                        api +
-                        categorey?.[0]?.images?.[index - 1]?.brandlogo
-                          ?.data?.[0]?.attributes?.url
-                      }
-                      alt={`category-${index - 1}`}
-                      style={{
-                        width: "100%",
-                        maxWidth: "250px",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-                  <div>
-                    
-                  </div>
-                  <div style={{ flex: 1, marginLeft: "5px" }}>
-                    <img
-                      src={
-                        api +
-                        categorey?.[0]?.images?.[index]?.brandlogo?.data?.[0]
-                          ?.attributes?.url
-                      }
-                      alt={`category-${index}`}
-                      style={{
-                        width: "100%",
-                        maxWidth: "250px",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-                </div>
-              ) : null
-            )}
+            <HoverDiv>
+              <img src={
+                api +
+                categorey?.[0]?.images?.[1]?.brandlogo
+                  ?.data?.[0]?.attributes?.url
+              }
+                alt={`category`}
+                style={{
+                  width: "100%",
+                  maxWidth: "250px",
+                  height: "auto",
+                  marginBottom: "5px",
+                  objectFit:"contain"
+                }}
+              />
+              <PantsDiv>
+                <Typography>Pants</Typography>
+                <Typography>200 products</Typography>
+              </PantsDiv>
+            </HoverDiv>
+            <HoverDiv>
+              <img src={
+                api +
+                categorey?.[0]?.images?.[2]?.brandlogo
+                  ?.data?.[0]?.attributes?.url
+              }
+                alt={`category`}
+                style={{
+                  width: "100%",
+                  maxWidth: "250px",
+                  height: "auto",
+                }}
+              />
+              <SaleTypography>SALE</SaleTypography>
+              <CoatDiv>
+                <Typography>Shirt</Typography>
+                <Typography>320 products</Typography>
+              </CoatDiv>
+            </HoverDiv>
+          </StyledDiv>
+          <StyledDiv>
+            <HoverDiv>
+              <img src={
+                api +
+                categorey?.[0]?.images?.[3]?.brandlogo
+                  ?.data?.[0]?.attributes?.url
+              }
+                alt={`category`}
+                style={{
+                  width: "100%",
+                  maxWidth: "250px",
+                  height: "auto",
+                  marginBottom: "5px"
+                }}
+              />
+              <ShirtDiv>
+                <Typography>Coat</Typography>
+                <Typography>520 products</Typography>
+              </ShirtDiv>
+            </HoverDiv>
+            <HoverDiv>
+              <img src={
+                api +
+                categorey?.[0]?.images?.[4]?.brandlogo
+                  ?.data?.[0]?.attributes?.url
+              }
+                alt={`category`}
+                style={{
+                  width: "100%",
+                  maxWidth: "250px",
+                  height: "auto",
+                }}
+              />
+              <JacketDiv>
+                <Typography>Jacket</Typography>
+                <Typography>103 products</Typography>
+              </JacketDiv>
+            </HoverDiv>
           </StyledDiv>
         </Box>
       </BoxStyled>

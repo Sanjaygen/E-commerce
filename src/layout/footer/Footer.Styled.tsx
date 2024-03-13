@@ -65,8 +65,41 @@ export const DivWrapper = styled("div")`
 `;
 
 export const CatTypography = styled(Typography)`
-
 line-height: 30px;
+@media (min-width: 390px) and (max-width: 767px) {
+  left: -50px;
+  position: relative;
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  display: flex;
+  position: relative;
+  left: 400px;
+  bottom: 230px; 
+  width: 100%
+  font-size: 25px;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  display: flex;
+  position: relative;
+  left: 120px;
+  top: 10px;
+  width: 100%
+  font-size: 25px;
+  
+}
+  
+`;
+export const CatTypography1 = styled(Typography)`
+line-height: 30px;
+font-size:13px;
+color:rgba(30, 40, 50, 1);
+cursor:pointer;
+&:hover{
+   color:#FF6F61;
+}
 @media (min-width: 390px) and (max-width: 767px) {
   left: -50px;
   position: relative;
@@ -119,6 +152,36 @@ line-height: 30px;
   top: 8px;
 }
 `;
+export const AbTypography1 = styled(Typography)`
+line-height: 30px;
+font-size:13px;
+color:rgba(30, 40, 50, 1);
+cursor:pointer;
+&:hover{
+  color:#FF6F61;
+}
+
+@media (min-width: 390px) and (max-width: 767px) {
+  left: -180px;
+  position: relative;
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  position: relative;
+  left: -180px;
+  width: 100%;
+  bottom: 150px;
+}
+  
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  position: relative;
+  left: 50px;
+  width: 100%;
+  top: 8px;
+}
+`;
 
 export const CusTypography = styled(Typography)`
 line-height: 28px;
@@ -137,15 +200,64 @@ line-height: 28px;
   font-size: 25px;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   display: flex;
   position: relative;
   right: 50px;
-  top: 30px;
+  top: 50px;
+  width: 100%
+  font-size: 25px;
+}
+@media(min-width:1200px){
+    display: flex;
+    position: relative;
+    right: 50px;
+    top: 32px;
+    width: 100%
+    font-size: 25px;
+}
+  
+`;
+export const CusTypography1 = styled(Typography)`
+line-height: 28px;
+font-size:13px;
+color:rgba(30, 40, 50, 1);
+cursor:pointer;
+&:hover{
+  color:#FF6F61;
+}
+@media (min-width: 390px) and (max-width: 767px) {
+  left: -50px;
+  position: relative;
+  margin-top:10px;
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  display: flex;
+  position: absolute;
+  left: 550px;
+  bottom: 350px; 
   width: 100%
   font-size: 25px;
 }
 
+@media (min-width: 1024px) and (max-width: 1199px) {
+  display: flex;
+  position: relative;
+  right: 50px;
+  top: 50px;
+  width: 100%
+  font-size: 25px;
+}
+@media(min-width:1200px){
+  display: flex;
+  position: relative;
+  right: 50px;
+  top: 32px;
+  width: 100%
+  font-size: 25px;
+}
   
 `;
 export const BottomContainer = styled(Box)<{ bgcolor: string , textcolor:string}>`
@@ -164,7 +276,7 @@ top: 160px;
   color: ${({textcolor}) => textcolor || appColors['black']};
   display: flex;
   height: 52px;
-
+  margin-top:30px;
 
 }
 
@@ -185,7 +297,7 @@ top: 160px;
   display: flex;
   height: 52px;
   position: relative;
-  top:164px;
+  top:185px;
 }
 @media(min-width:1445px){
    top: 290px;
@@ -281,7 +393,7 @@ export const StyledButton = styled(Button)`
 `;
 export const StyledIcon = styled(FontAwesomeIcon)`
 margin-left: 20px;
-font-size: 28px;
+font-size: 20px;
 border: 1px solid #fff;
 border-radius: 50%;
 padding: 5px;

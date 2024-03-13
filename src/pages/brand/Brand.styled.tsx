@@ -25,9 +25,29 @@ position: relative;
 top: 60px;
 
 `;
+export const LadyDiv = styled("div")`
+     visibility:hidden;
+     display:flex;
+     background:#1E2832;
+     color:#fff;
+     justify-content:space-between;
+     padding:10px;
+     position:relative;
+     margin-top:-48px;
+     cursor:pointer;
+     @media(min-width:390px) and (max-width:767px){
+        position:relative;
+        top:-30px;
+     }
+`
 
 export const LadyimgDiv = styled('div')`
-margin-right: 15px; 
+margin-right: 15px;
+&:hover{
+   ${LadyDiv}{
+      visibility:visible;
+   }
+} 
 // margin-bottom: 15px;
     img{
         height: 525px !important;
@@ -38,7 +58,8 @@ margin-right: 15px;
     
     img {
       height: 400px !important; 
-      width:  300px !important; 
+      width:  300px !important;
+      object-fit:contain; 
     }
   }
 
@@ -64,6 +85,108 @@ margin-right: 15px;
   }
   
 `;
+export const PantsDiv = styled("div")`
+     visibility:hidden;
+     display:flex;
+     background:#1E2832;
+     color:#fff;
+     justify-content:space-between;
+     padding:10px;
+     width:250px;
+     position:absolute;
+     margin-top:-52px;
+     cursor:pointer;
+     z-index:999;
+     @media(min-width:390px) and (max-width:767px){
+        width:175px;
+        padding:5px;
+        margin-top:-42px;
+     }
+`
+export const CoatDiv = styled("div")`
+     visibility:hidden;
+     display:flex;
+     background:#1E2832;
+     color:#fff;
+     justify-content:space-between;
+     padding:10px;
+     width:250px;
+     position:absolute;
+     margin-top:-47px;
+     cursor:pointer;
+     z-index:999;
+     @media(min-width:390px) and (max-width:767px){
+      width:175px;
+      padding:5px;
+      margin-top:-60px;
+   }
+   @media(min-width:768px) and (max-width:1024px){
+      margin-top:-70px;
+   }
+`
+export const ShirtDiv = styled("div")`
+     visibility:hidden;
+     display:flex;
+     background:#1E2832;
+     color:#fff;
+     justify-content:space-between;
+     padding:10px;
+     width:250px;
+     position:absolute;
+     margin-top:-52px;
+     cursor:pointer;
+     z-index:999;
+     @media(min-width:390px) and (max-width:767px){
+      width:175px;
+      padding:5px;
+      margin-top:-42px;
+   }
+`
+export const JacketDiv = styled("div")`
+     visibility:hidden;
+     display:flex;
+     background:#1E2832;
+     color:#fff;
+     justify-content:space-between;
+     padding:10px;
+     width:250px;
+     position:absolute;
+     margin-top:-47px;
+     cursor:pointer;
+     z-index:999;
+     @media(min-width:390px) and (max-width:767px){
+      width:175px;
+      padding:5px;
+      margin-top:-37px;
+   }
+`
+export const HoverDiv = styled("div")`
+     &:hover{
+          ${PantsDiv}{
+             visibility:visible;
+          }
+          ${ShirtDiv}{
+             visibility:visible;
+          }
+          ${CoatDiv}{
+             visibility:visible;
+          }
+          ${JacketDiv}{
+             visibility:visible;
+          }
+     }
+     @media(min-width:390px) and (max-width:767px){
+          img{
+             object-fit:contain;
+             margin-top:-20px;
+          }
+     }
+     @media(min-width:1200px) and (max-width:1440px){
+           img{
+              height:270px !important;
+           }
+     }
+` 
 export const LogoDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -111,15 +234,27 @@ export const ImageStyled = styled('img')`
     height: 70px;
     margin: 0 10px; 
 `;
-
 export const StyledDiv = styled('div')`
-
+    margin-left:10px;
 @media (min-width: 390px) and (max-width: 767px) {
     padding: 10px; 
-
+    display:flex;
+    gap:10px;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+    img {
+        height: 100% !important; 
+        width:  auto !important; 
+      }
+  }
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    display:flex;
+    gap:20px;
+    margin-top:20px;
     img {
         height: 100% !important; 
         width:  auto !important; 
@@ -169,9 +304,9 @@ export const StyledTypography = styled(Typography)`
 `;
 
 export const SaleTypography = styled(Typography)`
-position: relative;
+position: absolute;
 top: 40px;
-left: 0px;
+left: 62.7%;
 background-color: black;
 color: white;
 width: 60px;
@@ -179,27 +314,38 @@ text-align: center;
 z-index: 1;
 
 @media (min-width: 390px) and (max-width: 767px) {
- position: relative;
-top: 40px;
-left: 0px;
-background-color: black;
-color: white;
-width: 50px;
-font-size: 15px;
-text-align: center; 
-z-index: 1;
+  position: relative;
+  top: 40px;
+  left: -185px;
+  background-color: black;
+  color: white;
+  width: 50px;
+  font-size: 15px;
+  text-align: center; 
+  z-index: 1;
 
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    position: relative;
-top: 40px;
-left: 0px;
-background-color: black;
-color: white;
-width: 60px;
-text-align: center; 
-z-index: 1;
-  }
+@media (min-width: 768px) and (max-width: 1023px) {
+  position: relative;
+  top: 40px;
+  left: -270px;
+  background-color: black;
+  color: white;
+  width: 60px;
+  text-align: center; 
+  z-index: 1;
+}
+@media(min-width:1024px) and (max-width:1199px){
+  position: relative;
+  top: 40px;
+  left: -270px;
+}
+@media(min-width:1440px){
+   left:61.3%;
+}
+@media(min-width:1449px){
+  left:60%;
+}
 
 `

@@ -129,8 +129,60 @@ export const ImgDiv = styled('div')`
      margin-left:-40px;
  }
 `;
+export const DetailDiv = styled("div")`
+    visibility:hidden;
+    display:flex;
+    background:#1E2832;
+    color:#fff;
+    padding:10px;
+    width:21%;
+    position:absolute;
+    margin-top:-51px;
+    display:flex;
+    cursor:pointer;
+    @media (min-width: 390px) and (max-width: 767px){
+       width:85%;
+       margin-top:-45px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px){
+       width:40.5%;
+    }
+    @media (min-width: 1024px) and (max-width: 1199px){
+       width:20.5%;
+    }
+    
+`
+export const TypographyIcon = styled(Link)`
+    margin-left:40%;
+    text-decoration:none;
+    color:#fff;
+    &:hover{
+      color:#FF6F61;
+    }
+    @media(min-width:390px){
+       margin-left:55%;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+       margin-left:30%;
+    }
+    @media (min-width: 1024px) and (max-width: 1199px){
+      margin-left:30%;
+    }
+    @media(min-width:1200px) and (max-width:1439px){
+      margin-left:43%;
+    }
+    @media(min-width:1440px){
+       margin-left:40%;
+    }
+`
+
  export const CustomCard = styled("div")`
-  width: 282px;
+    width: 282px;
+  &:hover{
+    ${DetailDiv}{
+        visibility:visible;
+    }
+  }
 
   @media (min-width: 390px) and (max-width: 767px) {
     width: 282px;
@@ -231,7 +283,58 @@ cursor: pointer;
     left:-40px;
  }
 `;
+<<<<<<< HEAD
+export const StyledLink1 = styled(Link)`
+margin-right: 10px;
+text-decoration: none;
+font-weight:bold;
+color: rgba(0, 0, 0, 0.5);
+cursor: pointer;
+&:hover{
+   color:#FF6F61;
+}
+
+@media (min-width: 390px) and (max-width: 767px) {
+    margin-right: 5px;
+    text-decoration: none;
+    color:  rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 10px;
+    text-decoration: none;
+    color:  rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+  }
+
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+
+  }
+  @media(min-width:1200px) and (max-width:1439px){
+    position:relative;
+    left:50px; 
+  }
+  @media(min-width:1440px){
+    position:relative;
+    left:150px;
+ }
+ @media(min-width:1450px){
+    position:relative;
+    left:-40px;
+ }
+`;
+export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
+=======
 export const StyledButton = styled(Button)<{bgcolor: string, textcolor: string}>`
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
 margin-right: 0px;
 float: right;
 height: 25px;
@@ -241,7 +344,7 @@ left: 70px;
 background: ${({bgcolor}) => bgcolor || appColors['white']};
 color: ${({textcolor}) => textcolor || appColors['black']};
 &:hover {
-    background-color: black;
+    background-color: #FF6F61;
 }
 
   
@@ -258,7 +361,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
   }
 
@@ -275,7 +378,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
 
   }
@@ -292,7 +395,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
 
   }
@@ -308,7 +411,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
   }
   @media(min-width:1440px){
@@ -323,7 +426,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color: ${({ textcolor }) => textcolor || appColors["black"]};
     &:hover {
-      background-color: black;
+      background-color: #FF6F61;
     }
  }
  @media(min-width:1450px){
@@ -338,7 +441,7 @@ color: ${({textcolor}) => textcolor || appColors['black']};
   background: ${({ bgcolor }) => bgcolor || appColors["white"]};
   color: ${({ textcolor }) => textcolor || appColors["black"]};
   &:hover {
-    background-color: black;
+    background-color: #FF6F61;
   }
  }
 `;

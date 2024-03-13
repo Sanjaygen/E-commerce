@@ -46,7 +46,7 @@ width:200px;
 height:50px;
 border-radius:none;
 &:hover{
-    background-color:white;
+    background-color:#FF6F61;
 }
 @media (min-width: 390px) and (max-width: 767px) {
     font-size:10px;

@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
+<<<<<<< HEAD
+import { Box, styled } from "@mui/material";
+=======
 import { Box, styled } from "@mui/material"
 import { BoxContainer, ContentWrapper, StyledButton, TextPara } from "./Banner.Styled"
+>>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
 import { useQuery } from "@apollo/client";
 import { QUERY } from "../homepage/query";
 import { api } from "@/service/backend-api";
+import { BoxContainer, ContentWrapper, StyledButton, TextPara } from "./Banner.Styled";
 
 export const Banner = () => {
     const { data } = useQuery(QUERY);
