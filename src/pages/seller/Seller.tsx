@@ -41,13 +41,8 @@ const Seller = () => {
           </StyledLink1>
           <StyledLink1 href={"#"}>
             {silderProduct?.[0]?.navbar?.[3]?.title}
-<<<<<<< HEAD
           </StyledLink1>
-          <StyledButton variant="contained" bgColor={sellerButton} textColor={sellerText} >
-=======
-          </StyledLink>
           <StyledButton variant="contained" bgcolor={sellerButton} textcolor={sellerText} >
->>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
             {silderProduct?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
         </Box>

@@ -82,7 +82,6 @@ const Brand = () => {
                   maxWidth: "250px",
                   height: "auto",
                   marginBottom: "5px",
-                  objectFit:"contain"
                 }}
               />
               <PantsDiv>
