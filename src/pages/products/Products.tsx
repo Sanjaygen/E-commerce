@@ -2,6 +2,7 @@
 import {
   Box,
   CardContent,
+  Link,
   Typography,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,13 +37,8 @@ const Products = () => {
           </StyledLink1>
           <StyledLink1 href={"#"}>
             {productitems?.[0]?.navbar?.[3]?.title}
-<<<<<<< HEAD
           </StyledLink1>
-          <StyledButton variant="contained" bgColor={filterButton} textColor={filterText}>
-=======
-          </StyledLink>
           <StyledButton variant="contained" bgcolor={filterButton} textcolor={filterText}>
->>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
             <FontAwesomeIcon icon={faFilter} scale={"1.25x"} />
             {productitems?.[0]?.filterbutton?.[0]?.title}
           </StyledButton>
@@ -51,11 +47,13 @@ const Products = () => {
           <FirstDiv>
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[0]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 1"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -74,11 +72,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[1]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 2"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -97,11 +97,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 3"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -120,11 +122,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -146,11 +150,13 @@ const Products = () => {
           <SecDiv>
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[4]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -168,11 +174,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[5]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -194,11 +202,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[6]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 7"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -217,11 +227,13 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/ProductLink">
                 <img
                   src={api + productitems?.[0]?.cards?.[7]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 8"
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
+                </Link>
                 <DetailDiv>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 

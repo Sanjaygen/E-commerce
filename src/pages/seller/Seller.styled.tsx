@@ -283,7 +283,6 @@ cursor: pointer;
     left:-40px;
  }
 `;
-<<<<<<< HEAD
 export const StyledLink1 = styled(Link)`
 margin-right: 10px;
 text-decoration: none;
@@ -331,10 +330,7 @@ cursor: pointer;
     left:-40px;
  }
 `;
-export const StyledButton = styled(Button)<{bgColor: string, textColor: string}>`
-=======
 export const StyledButton = styled(Button)<{bgcolor: string, textcolor: string}>`
->>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
 margin-right: 0px;
 float: right;
 height: 25px;

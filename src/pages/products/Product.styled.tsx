@@ -155,17 +155,12 @@ export const StyledButton = styled(Button)<{
   font-size: 12px; 
   left: 50px; 
   gap: 10px;
-<<<<<<< HEAD
-  background: ${({ bgColor }) => bgColor || appColors["white"]};
-  color: ${({ textColor }) => textColor || appColors["black"]};
-  &:hover{
-    background-color:#FF6F61;
-=======
   background: ${({ bgcolor }) => bgcolor || appColors["white"]};
   color: ${({ textcolor }) => textcolor || appColors["black"]};
-  &:hover {
-    background-color: black;
->>>>>>> e4429499cfc1ca021d572eda57e3e815a9de0bcf
+  &:hover{
+    background-color:#FF6F61;
+
+
   }
 
   
