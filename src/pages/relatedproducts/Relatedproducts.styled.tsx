@@ -1,3 +1,4 @@
+import { appColors } from "@/theme/color.Config";
 import { Box, Card, Typography } from "@mui/material";
 import styled from "styled-components";
 
@@ -24,6 +25,10 @@ export const CarouselBox = styled(Box)`
         margin-right:15px;
     }
     @media(min-width:1440px) and (max-width:1460px){
+        text-align:center;
+        justify-content:center;
+    }
+    @media(min-width:1450px){
         text-align:center;
         justify-content:center;
     }
@@ -94,13 +99,13 @@ export const CardTypo3 = styled(Typography)`
     margin-left:10px;
     padding-left:20px;
 `
-export const CardButton = styled("button")`
-    color:#6F6F6F;
+export const CardButton = styled("button")<{bgcolor: string; textcolor: string;}>`
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     font-family:Inter;
     font-weight:500;
     width:200px;
     padding:10px;
-    background:#fff;
     border:none;
     margin-left: 25px;
     margin-top:35px;

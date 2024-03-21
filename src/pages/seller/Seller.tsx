@@ -21,6 +21,8 @@ const Seller = () => {
 
   const sellerButton = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.background;
   const sellerText = silderProduct?.[0]?.filterbutton?.[0]?.color?.navbutton?.[0]?.text;
+  const hoverBg = silderProduct?.[0]?.cards?.[0]?.colors?.color?.[0]?.background;
+  const hoverText = silderProduct?.[0]?.cards?.[0]?.colors?.color?.[1]?.hover?.text;
   return (
     <BoxContainer>
       <TopTypography
@@ -56,11 +58,11 @@ const Seller = () => {
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {silderProduct?.[0]?.cards?.[0]?.link}</TypographyIcon>
                 </DetailDiv>
                 <HotTypography> HOT</HotTypography>
                 <StyledTypography variant="h6">
@@ -86,11 +88,11 @@ const Seller = () => {
                     position: "relative"    
                   }}
                 />
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {silderProduct?.[0]?.cards?.[0]?.link}</TypographyIcon>
                 </DetailDiv>
                 <StyledTypography variant="h6">
                 {silderProduct?.[0]?.cards?.[1]?.title}
@@ -115,11 +117,11 @@ const Seller = () => {
                     position: "relative"
                   }}
                 />
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {silderProduct?.[0]?.cards?.[0]?.link}</TypographyIcon>
                 </DetailDiv>
                 <SaleTypography> SALE </SaleTypography>
                 <StyledTypography variant="h6">
@@ -141,11 +143,11 @@ const Seller = () => {
                   alt="Brand 6"
                   style={{ width: "95%",marginBottom: "10px", position: "relative"}}
                 />
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {silderProduct?.[0]?.cards?.[0]?.link}</TypographyIcon>
                 </DetailDiv>
                 <TypographySale> SALE</TypographySale>
                 <div

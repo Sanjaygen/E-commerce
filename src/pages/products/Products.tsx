@@ -20,6 +20,8 @@ const Products = () => {
 
   const filterButton = productitems?.[0]?.filterbutton?.[0]?.color?.filter?.[0]?.color?.background;
   const filterText = productitems?.[0]?.filterbutton?.[0]?.color?.filter?.[0]?.color?.text;
+  const hoverBg = productitems?.[0]?.cards?.[0]?.colors?.color?.[0]?.background;
+  const hoverText = productitems?.[0]?.cards?.[0]?.colors?.color?.[1]?.hover?.text;
   return (
     <BoxContainer>
       <TopTypography variant="h4"> {productitems?.[0]?.title}</TopTypography>
@@ -54,18 +56,18 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[0]?.title}
                 </StyledTypography>
                 <ProductContent>
                   <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>{productitems?.[0]?.cards?.[0]?.content}</Typography>
-                  <Typography variant="body2" sx={{ marginRight: '20px' }} style={{ fontWeight: 'bold' }}>$63.85</Typography>
+                  <Typography variant="body2" sx={{ marginRight: '20px' }} style={{ fontWeight: 'bold' }}>{productitems?.[0]?.cards?.[0].prize}</Typography>
                 </ProductContent>
               </CardContent>
             </CustomCard>
@@ -79,11 +81,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[1]?.title}
@@ -104,11 +106,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <StyledTypography variant="h6">
                   {productitems?.[0]?.cards?.[2]?.title}
@@ -129,11 +131,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <SaleTypography> SALE</SaleTypography>
                 <StyledTypography variant="h6">
@@ -157,11 +159,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <HotTypography> HOT </HotTypography>
                 <StyledTypography variant="h6">{productitems?.[0]?.cards?.[4]?.title}</StyledTypography>
@@ -181,11 +183,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative'}}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#"  textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <TypographySale> SALE</TypographySale>
                 <div style={{ position: 'relative'}}>
@@ -209,11 +211,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#"  textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <div style={{ position: 'relative' }}>
                   <StyledTypography variant="h6">{productitems?.[0]?.cards?.[6]?.title}</StyledTypography>
@@ -234,11 +236,11 @@ const Products = () => {
                   style={{ width: "95%", marginBottom: "10px", position: 'relative' }}
                 />
                 </Link>
-                <DetailDiv>
+                <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
                     <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-                    <TypographyIcon href="#"><FontAwesomeIcon icon={faBagShopping} /> Shop Now</TypographyIcon>
+                    <TypographyIcon href="#" textcolor={hoverText}><FontAwesomeIcon icon={faBagShopping} /> {productitems?.[0]?.cards?.[0].link}</TypographyIcon>
                 </DetailDiv>
                 <div style={{ position: 'relative', }}>
                   <StyledTypography variant="h3" >

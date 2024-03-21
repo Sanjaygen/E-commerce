@@ -97,8 +97,8 @@ export const ImgDiv = styled("div")`
      left:243px;
      font-size:40px;
   }
-  @media(min-width:1449px){
-      left:100px;
+  @media(min-width:1450px){
+      left:135px;
       top:280px;
       font-size:50px;
       height:200px;
@@ -149,8 +149,8 @@ export const ImgDiv1 = styled("div")`
     left:400px;
     font-size:40px;
  }
- @media(min-width:1449px){
-     left:310px;
+ @media(min-width:1450px){
+     left:345px;
      top:280px;
      font-size:50px;
      height:200px;
@@ -201,8 +201,8 @@ export const ImgDiv2 = styled("div")`
   left:565px;
   font-size:40px;
 }
-@media(min-width:1449px){
-  left:520px;
+@media(min-width:1450px){
+  left:555px;
   top:280px;
   font-size:50px;
   height:200px;
@@ -253,8 +253,8 @@ export const ImgDiv3 = styled("div")`
   left:725px;
   font-size:40px;
 }
-@media(min-width:1449px){
-  left:730px;
+@media(min-width:1450px){
+  left:765px;
   top:280px;
   font-size:50px;
   height:200px;
@@ -305,8 +305,8 @@ export const ImgDiv4 = styled("div")`
   left:885px;
   font-size:40px;
 }
-@media(min-width:1449px){
-  left:940px;
+@media(min-width:1450px){
+  left:975px;
   top:280px;
   font-size:50px;
   height:200px;
@@ -357,8 +357,8 @@ export const ImgDiv5 = styled("div")`
   left:1047px;
   font-size:40px;
 }
-@media(min-width:1449px){
-  left:1150px;
+@media(min-width:1450px){
+  left:1185px;
   top:280px;
   font-size:50px;
   height:200px;

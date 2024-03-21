@@ -216,6 +216,9 @@ line-height: 28px;
     width: 100%
     font-size: 25px;
 }
+@media(min-width:1450px){
+    top:10px;
+}
   
 `;
 export const CusTypography1 = styled(Typography)`
@@ -258,7 +261,9 @@ cursor:pointer;
   width: 100%
   font-size: 25px;
 }
-  
+@media(min-width:1450px){
+    top:10px;
+} 
 `;
 export const BottomContainer = styled(Box)<{ bgcolor: string , textcolor:string}>`
 border: 1px solid black;
@@ -300,7 +305,7 @@ top: 160px;
   top:185px;
 }
 @media(min-width:1445px){
-   top: 290px;
+   top: 293px;
 }
 
 `;

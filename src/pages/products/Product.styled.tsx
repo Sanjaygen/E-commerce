@@ -246,10 +246,10 @@ export const CommonDiv = styled("div")`
     justify-content: space-between;
   }
 `;
-export const DetailDiv = styled("div")`
+export const DetailDiv = styled("div")<{bgcolor: string;}>`
     visibility:hidden;
     display:flex;
-    background:#1E2832;
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
     color:#fff;
     padding:10px;
     width:21%;
@@ -268,12 +268,12 @@ export const DetailDiv = styled("div")`
     }
     
 `
-export const TypographyIcon = styled(Link)`
+export const TypographyIcon = styled(Link)<{textcolor: string;}>`
     margin-left:40%;
     color:#fff;
     text-decoration:none;
     &:hover{
-      color:#FF6F61;
+      color: ${({ textcolor }) => textcolor || appColors["black"]};
     }
     @media (min-width: 1024px) and (max-width: 1199px){
       margin-left:30%;
