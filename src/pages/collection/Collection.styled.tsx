@@ -1,3 +1,4 @@
+import { appColors } from "@/theme/color.Config";
 import { Box, Breadcrumbs, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 
@@ -17,6 +18,9 @@ export const SetIcon = styled(Box)`
     }
     @media(min-width:1024px) and (max-width:1199px){
         width:20%; 
+    }
+    @media(min-width:1450px) and (max-width:1550px){
+        width:12%
     }
 `
 export const BoxContainer = styled(Box)`
@@ -495,9 +499,9 @@ export const ButtonDiv3 = styled("button")`
         width:30px;
     }
 `
-export const ButtonDiv4 = styled("button")`
-    background:#E73C17;
-    color:white;
+export const ButtonDiv4 = styled("button")<{bgcolor: string; textcolor: string;}>`
+    background: ${({ bgcolor }) => bgcolor || appColors["white"]};
+    color: ${({ textcolor }) => textcolor || appColors["black"]};
     border:none;
     height:33px;
     width:150px;
@@ -611,6 +615,9 @@ export const DetailTypo1 = styled(Typography)`
         margin-right:10px;
         font-size:13px;
     }
+    @media(min-width:1450px){
+        line-height:40px
+    }
 `
 export const DetailTypo2 = styled(Typography)`
     font-family:Inter;
@@ -622,6 +629,9 @@ export const DetailTypo2 = styled(Typography)`
         margin-right:10px;
         font-size:13px;
     }
+    @media(min-width:1450px){
+        line-height:40px
+    }
 `
 export const DetailTypo3 = styled(Typography)`
     font-family:Inter;
@@ -631,6 +641,9 @@ export const DetailTypo3 = styled(Typography)`
     @media(min-width:390px) and (max-width:767px){
         display:none;
     }
+    @media(min-width:1450px){
+        line-height:40px
+    }
 `
 export const DetailTypo4 = styled(Typography)`
     font-family:Inter;
@@ -639,6 +652,9 @@ export const DetailTypo4 = styled(Typography)`
     line-height:30px;
     @media(min-width:390px) and (max-width:767px){
         display:none;
+    }
+    @media(min-width:1450px){
+        line-height:40px
     }
 `
 export const BreadcrumbsStyle = styled(Breadcrumbs)`
@@ -653,7 +669,10 @@ export const BreadcrumbsStyle = styled(Breadcrumbs)`
      @media(min-width:1024px) and (max-width:1199px){
         margin-left:360px;
      }
-     @media(min-width:1439px) and (max-width:1460px){
+     @media(min-width:1439px){
         margin-left:550px;
      }
+     @media(min-width:1450px) and (max-width:1550px){
+        margin-left:620px;
+    }
 `

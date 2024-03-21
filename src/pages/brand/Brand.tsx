@@ -26,7 +26,7 @@ const Brand = () => {
   const { homes } = data || {};
   const { brands, categorey } = homes?.data?.[0]?.attributes || {};
   console.log(categorey, 'categorey');
-
+  const hoverBg = categorey?.[0]?.images?.[0]?.colors?.color?.[0]?.background;
   return (
     <MainDiv>
       <LogoDiv>
@@ -64,9 +64,9 @@ const Brand = () => {
                 marginRight: "auto",
               }}
             />
-            <LadyDiv>
-              <Typography>Manto</Typography>
-              <Typography>83 products</Typography>
+            <LadyDiv bgcolor={hoverBg}>
+              <Typography>{categorey?.[0]?.images?.[0]?.productname}</Typography>
+              <Typography>{categorey?.[0]?.images?.[0]?.productcount}</Typography>
             </LadyDiv>
           </LadyimgDiv>
           <StyledDiv>
@@ -84,9 +84,9 @@ const Brand = () => {
                   marginBottom: "5px",
                 }}
               />
-              <PantsDiv>
-                <Typography>Pants</Typography>
-                <Typography>200 products</Typography>
+              <PantsDiv bgcolor={hoverBg}>
+                <Typography>{categorey?.[0]?.images?.[1]?.productname}</Typography>
+                <Typography>{categorey?.[0]?.images?.[1]?.productcount}</Typography>
               </PantsDiv>
             </HoverDiv>
             <HoverDiv>
@@ -103,9 +103,9 @@ const Brand = () => {
                 }}
               />
               <SaleTypography>SALE</SaleTypography>
-              <CoatDiv>
-                <Typography>Shirt</Typography>
-                <Typography>320 products</Typography>
+              <CoatDiv bgcolor={hoverBg}>
+                <Typography>{categorey?.[0]?.images?.[2]?.productname}</Typography>
+                <Typography>{categorey?.[0]?.images?.[2]?.productcount}</Typography>
               </CoatDiv>
             </HoverDiv>
           </StyledDiv>
@@ -124,9 +124,9 @@ const Brand = () => {
                   marginBottom: "5px"
                 }}
               />
-              <ShirtDiv>
-                <Typography>Coat</Typography>
-                <Typography>520 products</Typography>
+              <ShirtDiv bgcolor={hoverBg}>
+                <Typography>{categorey?.[0]?.images?.[3]?.productname}</Typography>
+                <Typography>{categorey?.[0]?.images?.[3]?.productcount}</Typography>
               </ShirtDiv>
             </HoverDiv>
             <HoverDiv>
@@ -142,9 +142,9 @@ const Brand = () => {
                   height: "auto",
                 }}
               />
-              <JacketDiv>
-                <Typography>Jacket</Typography>
-                <Typography>103 products</Typography>
+              <JacketDiv bgcolor={hoverBg}>
+                <Typography>{categorey?.[0]?.images?.[4]?.productname}</Typography>
+                <Typography>{categorey?.[0]?.images?.[4]?.productcount}</Typography>
               </JacketDiv>
             </HoverDiv>
           </StyledDiv>

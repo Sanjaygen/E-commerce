@@ -1,3 +1,4 @@
+import { appColors } from "@/theme/color.Config";
 import { Box, Typography } from "@mui/material";
 import styled from "styled-components";
 
@@ -25,10 +26,10 @@ position: relative;
 top: 60px;
 
 `;
-export const LadyDiv = styled("div")`
+export const LadyDiv = styled("div")<{bgcolor: string;}>`
      visibility:hidden;
      display:flex;
-     background:#1E2832;
+     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
      color:#fff;
      justify-content:space-between;
      padding:10px;
@@ -85,10 +86,10 @@ margin-right: 15px;
   }
   
 `;
-export const PantsDiv = styled("div")`
+export const PantsDiv = styled("div")<{bgcolor: string;}>`
      visibility:hidden;
      display:flex;
-     background:#1E2832;
+     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
      color:#fff;
      justify-content:space-between;
      padding:10px;
@@ -103,10 +104,10 @@ export const PantsDiv = styled("div")`
         margin-top:-42px;
      }
 `
-export const CoatDiv = styled("div")`
+export const CoatDiv = styled("div")<{bgcolor: string;}>`
      visibility:hidden;
      display:flex;
-     background:#1E2832;
+     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
      color:#fff;
      justify-content:space-between;
      padding:10px;
@@ -124,10 +125,10 @@ export const CoatDiv = styled("div")`
       margin-top:-70px;
    }
 `
-export const ShirtDiv = styled("div")`
+export const ShirtDiv = styled("div")<{bgcolor: string;}>`
      visibility:hidden;
      display:flex;
-     background:#1E2832;
+     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
      color:#fff;
      justify-content:space-between;
      padding:10px;
@@ -142,10 +143,10 @@ export const ShirtDiv = styled("div")`
       margin-top:-42px;
    }
 `
-export const JacketDiv = styled("div")`
+export const JacketDiv = styled("div")<{bgcolor: string;}>`
      visibility:hidden;
      display:flex;
-     background:#1E2832;
+     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
      color:#fff;
      justify-content:space-between;
      padding:10px;
@@ -301,6 +302,9 @@ export const StyledTypography = styled(Typography)`
      top:-120px;
      left: -650px;
   }
+  @media(min-width:1450px){
+     top:-180px;
+  }
 `;
 
 export const SaleTypography = styled(Typography)`
@@ -345,7 +349,7 @@ z-index: 1;
    left:61.3%;
 }
 @media(min-width:1449px){
-  left:60%;
+  left:59.5%;
 }
 
 `
