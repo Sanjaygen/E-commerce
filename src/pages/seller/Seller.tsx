@@ -53,11 +53,13 @@ const Seller = () => {
           <ImgDiv>
             <CustomCard>
               <CardContent>
+                <Link href="/Greentop">
                 <img
                   src={api+silderProduct?.[0]?.cards?.[0]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 5"
                   style={{ width: "95%", marginBottom: "10px" }}
                 />
+                </Link>
                 <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -79,6 +81,7 @@ const Seller = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/Bags">
                 <img
                   src={api+silderProduct?.[0]?.cards?.[1]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 2"
@@ -88,6 +91,7 @@ const Seller = () => {
                     position: "relative"    
                   }}
                 />
+                </Link>
                 <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -108,6 +112,7 @@ const Seller = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/Dress">
                 <img
                   src={api+silderProduct?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
@@ -117,6 +122,7 @@ const Seller = () => {
                     position: "relative"
                   }}
                 />
+                </Link>
                 <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
@@ -138,11 +144,13 @@ const Seller = () => {
 
             <CustomCard>
               <CardContent>
+                <Link href="/Shoe">
                 <img
                   src={api+silderProduct?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
                   style={{ width: "95%",marginBottom: "10px", position: "relative"}}
                 />
+                </Link>
                 <DetailDiv bgcolor={hoverBg}>
                     <FontAwesomeIcon icon={faHeart} />
                     <div style={{position:"relative",left:"20px"}}> 
