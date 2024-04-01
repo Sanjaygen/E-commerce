@@ -1,4 +1,4 @@
-import { Header } from "@/layout/header/Header";
+import { Header } from "@/layout/helper-components/header/Header";
 import { BoxStyled } from "./HomePage.Styled";
 import Intro from "../intro/Intro";
 import Brand from "../brand/Brand";
@@ -7,7 +7,6 @@ import { useQuery } from "@apollo/client";
 import { QUERY } from "./query";
 import Seller from "../seller/Seller";
 import { Follow } from "../follow/Follow";
-import { Footer } from "@/layout/footer/Footer";
 import { Banner } from "../banner/Banner";
 
 const Homepage = () => {
@@ -20,15 +19,13 @@ const Homepage = () => {
   return (
     <>
       <BoxStyled bgcolor={homeBack} textcolor={homeText}>
-        <Header />  
         <Intro />
       </BoxStyled>
-      <Brand />
-      <Products />
+       <Brand/>
+      <Products/>
       <Banner/>
-      <Seller />
-      <Follow />
-      <Footer />
+      <Seller/> 
+      <Follow/> 
     </>
   );
 };
