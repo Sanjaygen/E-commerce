@@ -2,15 +2,28 @@ import { appColors } from "@/theme/color.Config";
 import { Box, Card, Typography } from "@mui/material";
 import styled from "styled-components";
 
+export const BoxStyled = styled(Box)`
+    position:relative;
+
+    @media(min-width:390px) and (max-width:767px){
+        position:relative;
+        height: 90vh !important;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
+    }
+`
 export const TypoProducts = styled(Typography)`
     margin-top:100px;
     text-align:center;
     justify-content:center;
     font-family:Inter;
     font-weight:500;
+    position:relative;
     @media(min-width:390px) and (max-width:767px){
          font-size:15px;
          margin-top:50px;
+         position:relative;
     }
 `
 export const CarouselBox = styled(Box)`
@@ -18,15 +31,18 @@ export const CarouselBox = styled(Box)`
     margin-top:100px;
     margin-left:40px;
     margin-right:40px;
+    position:relative;
     gap:20px;
     @media(min-width:390px) and (max-width:767px){
         margin-top:50px;
         margin-left:15px;
         margin-right:15px;
+        position:relative;
     }
     @media(min-width:1440px) and (max-width:1460px){
         text-align:center;
         justify-content:center;
+        position:relative;
     }
     @media(min-width:1450px){
         text-align:center;
@@ -34,6 +50,7 @@ export const CarouselBox = styled(Box)`
     }
 `
 export const CardDiv = styled("div")`
+
     img{
     border:1px solid #D7D7D7;
     padding:5px;
@@ -47,11 +64,15 @@ export const CardDiv = styled("div")`
     @media(min-width:390px) and (max-width:767px){
         img{
         margin-left:135px; 
+        position:relative;
+        bottom: 40px;
     }
 }
 @media(min-width:768px) and (max-width:1023px){
         img{
             margin-left:175px;
+            position:relative;
+            bottom: 40px;
     }
 }
 `
@@ -61,10 +82,17 @@ export const CardTypo = styled(Typography)`
     border-radius:100px;
     font-size:13px;
     width:60px;
-    position:absolute;
+    position:absolute;  
     margin-top:20px;
     margin-left:10px;
     padding-left:13px;
+
+    @media(min-width:390px) and (max-width:767px){
+        position:relative;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
+    }
 `
 export const CardTypo1 = styled(Typography)`
     color:#fff;
@@ -76,6 +104,12 @@ export const CardTypo1 = styled(Typography)`
     margin-top:20px;
     margin-left:10px;
     padding-left:13px;
+    @media(min-width:390px) and (max-width:767px){
+        position:relative;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
+    }
 `
 export const CardTypo2 = styled(Typography)`
     color:#fff;
@@ -87,17 +121,29 @@ export const CardTypo2 = styled(Typography)`
     margin-top:20px;
     margin-left:10px;
     padding-left:15px;
+     @media(min-width:390px) and (max-width:767px){
+        position:relative;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
+    }
 `
 export const CardTypo3 = styled(Typography)`
     color:#fff;
     background:#7F7CF6;
     border-radius:100px;
     font-size:13px;
-    width:100px;
+    width:90px;
     position:absolute;
     margin-top:20px;
     margin-left:10px;
     padding-left:20px;
+    @media(min-width:390px) and (max-width:767px){
+        position:relative;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
+    }
 `
 export const CardButton = styled("button")<{bgcolor: string; textcolor: string;}>`
     background: ${({ bgcolor }) => bgcolor || appColors["white"]};
@@ -157,11 +203,13 @@ export const StyleTypo = styled(Typography)`
         margin-left:0px;
         margin-top:20px;
         font-size:12px;
+        // position:relative; 
     }
     @media(min-width:768px) and (max-width:1023px){
         margin-left:25px;
         margin-top:20px;
         font-size:12px;
+        // position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:23px;
@@ -174,16 +222,18 @@ export const StyleTypo1 = styled(Typography)`
     font-size:14px;
     position:absolute;
     margin-top:30px;
-    margin-left:30px;
+    margin-left:70px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:0px;
         margin-top:20px;
         font-size:12px;
+        position:relative;
     }
     @media(min-width:768px) and (max-width:1023px){
         margin-left:40px;
         margin-top:20px;
         font-size:12px;
+        position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:26px;
@@ -215,10 +265,12 @@ export const TypographyAmt1 = styled(Typography)`
     @media(min-width:390px) and (max-width:767px){
         margin-left:40px;
         margin-top:40px;
+        position:relative;
     }
     @media(min-width:768px) and (max-width:1023px){
         margin-left:80px;
         margin-top:40px;
+        position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:66px;
