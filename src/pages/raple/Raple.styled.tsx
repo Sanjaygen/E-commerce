@@ -688,7 +688,7 @@ export const DetailTypo4 = styled(Typography)`
     }
 `
 export const BreadcrumbsStyle = styled(Breadcrumbs)`
-     margin-left:540px;
+     margin-left:510px;
      margin-top:15px;
      @media(min-width:390px) and (max-width:767px){
         margin-left:120px;

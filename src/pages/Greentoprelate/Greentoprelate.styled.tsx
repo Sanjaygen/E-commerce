@@ -152,7 +152,7 @@ export const StyleTypo = styled(Typography)`
     font-size:14px;
     position:absolute;
     margin-top:30px;
-    margin-left:40px;
+    margin-left:20px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:0px;
         margin-top:20px;
@@ -174,7 +174,7 @@ export const StyleTypo1 = styled(Typography)`
     font-size:14px;
     position:absolute;
     margin-top:30px;
-    margin-left:70px;
+    margin-left:20px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:0px;
         margin-top:20px;

@@ -62,6 +62,7 @@ export const StyledBox1 = styled(Box)`
         height:300px;
         width:300px;
         margin-left:35px;
+        margin-right:35px;
     }
     @media(min-width:390px) and (max-width:767px){
         height:200px;

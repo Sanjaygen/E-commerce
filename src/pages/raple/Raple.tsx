@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import {
   BoxContainer,
   BrandTypography,
@@ -33,7 +33,6 @@ import {
   ButtonDiv3,
   ButtonDiv4,
   ButtonDiv5,
-  BoxDetails,
   Typography1,
   Typography3,
   Typography2,
@@ -49,18 +48,19 @@ import {
   DetailTypo4,
   SetIcon,
   BreadcrumbsStyle,
-} from "./Collection.styled";
-import { PRODUCTSQUERY } from "./query";
+} from "./Raple.styled";
+import { RAPLEQUERY } from "./query";
 import { useQuery } from "@apollo/client";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { api } from "@/service/backend-api";
 
-const Collection = () => {
-  const { data } = useQuery(PRODUCTSQUERY);
+const Raple = () => {
+  const { data } = useQuery(RAPLEQUERY);
   console.log(data, "data");
-  const { products } = data || {};
+  const { raples } = data || {};
   const { breadcrum, leftdetail, rightdetail, description } =
-    products?.data?.[0]?.attributes || {};
-  const CollectionDetail = () => {
+  raples?.data?.[0]?.attributes || {};
+  const RapleDetail = () => {
     const [count, setCount] = useState(1);
 
     const increment = () => {
@@ -84,7 +84,7 @@ const Collection = () => {
                 marginRight: "8px",
               }}
             />
-            {products?.data?.[0]?.attributes?.nav}
+            {raples?.data?.[0]?.attributes?.nav}
             <KeyboardArrowDownIcon
               sx={{
                 position: "relative",
@@ -139,28 +139,28 @@ const Collection = () => {
           <StyledBox>
             <ImageStyled1>
               <img
-                src={rightdetail?.[0]?.sideimages?.[0]?.image?.data?.[0]?.attributes?.url}
+                src={api+rightdetail?.[0]?.rightimages?.[0]?.image?.data?.[0]?.attributes?.url}
                 alt={
-                  rightdetail?.[0]?.sideimages?.[0]?.image?.data?.[0]
+                  rightdetail?.[0]?.rightimages?.[0]?.image?.data?.[0]
                     ?.attributes?.alternativeText
                 }
                 style={{ height: "89px", width: "108px",marginLeft:"20px" }}
               />
             </ImageStyled1>
             <ImageStyled2>
-              <img src={rightdetail?.[0]?.sideimages?.[1]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
+              <img src={rightdetail?.[0]?.rightimages?.[1]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
             </ImageStyled2>
             <ImageStyled3>
-              <img src={rightdetail?.[0]?.sideimages?.[2]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
+              <img src={rightdetail?.[0]?.rightimages?.[2]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
             </ImageStyled3>
             <ImageStyled4>
-              <img src={rightdetail?.[0]?.sideimages?.[3]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
+              <img src={rightdetail?.[0]?.rightimages?.[3]?.image?.data?.[0]?.attributes?.url} height="89px" width="108px" />
             </ImageStyled4>
           </StyledBox>
           <StyledBox1>
             <div>
               <img
-                src={rightdetail?.[0]?.image?.data?.[0]?.attributes?.url}
+                src={api+rightdetail?.[0]?.image?.data?.[0]?.attributes?.url}
                 alt={rightdetail?.[0]?.image?.data?.[0]?.attributes?.alternativeText}
               />
             </div>
@@ -188,9 +188,9 @@ const Collection = () => {
                   color: "#191919",
                 }}
               >
-                {leftdetail?.[0]?.detail?.[0]?.content1}
+                {leftdetail?.[0]?.details?.[0]?.content1}
               </b>
-              {leftdetail?.[0]?.detail?.[0]?.content2}
+              {leftdetail?.[0]?.details?.[0]?.content2}
             </BrandTypography>
             <BrandTypography1>
               <b
@@ -200,9 +200,9 @@ const Collection = () => {
                   color: "#191919",
                 }}
               >
-                {leftdetail?.[0]?.detail?.[1]?.content1}
+                {leftdetail?.[0]?.details?.[1]?.content1}
               </b>
-              {leftdetail?.[0]?.detail?.[1]?.content2}
+              {leftdetail?.[0]?.details?.[1]?.content2}
             </BrandTypography1>
             <BrandTypography2>
               <b
@@ -212,9 +212,9 @@ const Collection = () => {
                   color: "#191919",
                 }}
               >
-                {leftdetail?.[0]?.detail?.[2]?.content1}
+                {leftdetail?.[0]?.details?.[2]?.content1}
               </b>
-              {leftdetail?.[0]?.detail?.[2]?.content2}
+              {leftdetail?.[0]?.details?.[2]?.content2}
             </BrandTypography2>
             <LgTypography>
               {leftdetail?.[0]?.name}
@@ -257,33 +257,33 @@ const Collection = () => {
             </div>
             <TypographyUl>
               <TypographyLi>
-                {leftdetail?.[0]?.list?.[0]?.content1}
+                {leftdetail?.[0]?.lists?.[0]?.content1}
               </TypographyLi>
               <TypographyLi>
-                {leftdetail?.[0]?.list?.[1]?.content1}
+                {leftdetail?.[0]?.lists?.[1]?.content1}
               </TypographyLi>
               <TypographyLi>
-                {leftdetail?.[0]?.list?.[2]?.content1}
+                {leftdetail?.[0]?.lists?.[2]?.content1}
               </TypographyLi>
               <TypographyLi>
-                {leftdetail?.[0]?.list?.[3]?.content1}
+                {leftdetail?.[0]?.lists?.[3]?.content1}
               </TypographyLi>
               <TypographyLi>
-                {leftdetail?.[0]?.list?.[4]?.content1}
+                {leftdetail?.[0]?.lists?.[4]?.content1}
               </TypographyLi>
             </TypographyUl>
             <DivCount>
-              <CountTypo1>{leftdetail?.[0]?.multiplesize?.[0]?.size}</CountTypo1>
-              <CountTypo2>{leftdetail?.[0]?.multiplesize?.[1]?.size}</CountTypo2>
-              <CountTypo3>{leftdetail?.[0]?.multiplesize?.[2]?.size}</CountTypo3>
+              <CountTypo1>{leftdetail?.[0]?.multisize?.[0]?.title}</CountTypo1>
+              <CountTypo2>{leftdetail?.[0]?.multisize?.[1]?.title}</CountTypo2>
+              <CountTypo3>{leftdetail?.[0]?.multisize?.[2]?.title}</CountTypo3>
             </DivCount>
             <DivCount1>
-              <CountTypo4>{leftdetail?.[0]?.multiplesize?.[3]?.size}</CountTypo4>
-              <CountTypo5>{leftdetail?.[0]?.multiplesize?.[4]?.size}</CountTypo5>
-              <CountTypo6>{leftdetail?.[0]?.multiplesize?.[5]?.size}</CountTypo6>
+              <CountTypo4>{leftdetail?.[0]?.multisize?.[3]?.title}</CountTypo4>
+              <CountTypo5>{leftdetail?.[0]?.multisize?.[4]?.title}</CountTypo5>
+              <CountTypo6>{leftdetail?.[0]?.multisize?.[5]?.title}</CountTypo6>
             </DivCount1>
             <DivAmount>{leftdetail?.[0]?.taxname}</DivAmount>
-            <AmtTypo>{leftdetail?.[0]?.prize1}</AmtTypo>
+            <AmtTypo>{leftdetail?.[0]?.prize}</AmtTypo>
             <ButtonDiv>
               <ButtonDiv1 onClick={decrement}>-</ButtonDiv1>
               <ButtonDiv2>{count}</ButtonDiv2>
@@ -294,10 +294,10 @@ const Collection = () => {
           </Box>
         </StyledDiv>
         <Tabs>
-          <TabList style={{display:"flex",textAlign:"center",justifyContent:"center",marginTop:"60px",listStyle:"none"}}>
-            <Typography1>{description?.[0]?.links?.[0]?.link}</Typography1>
-            <Typography2>{description?.[0]?.links?.[1]?.link}</Typography2>
-            <Typography3>{description?.[0]?.links?.[2]?.link}</Typography3>
+          <TabList style={{display:"flex",textAlign:"center",justifyContent:"center",marginTop:"120px",listStyle:"none"}}>
+            <Typography1>{description?.[0]?.link?.[0]?.link}</Typography1>
+            <Typography2>{description?.[0]?.link?.[1]?.link}</Typography2>
+            <Typography3>{description?.[0]?.link?.[2]?.link}</Typography3>
           </TabList>
           <BoxDetails1>
           <DetailTypo> {description?.[0]?.description} </DetailTypo>
@@ -407,9 +407,9 @@ const Collection = () => {
 
   return (
     <>
-      <CollectionDetail />
+      <RapleDetail />
     </>
   );
 };
 
-export default Collection;
+export default Raple;

@@ -74,7 +74,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Bags">
                 <img
                   src={api + productitems?.[0]?.cards?.[1]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 2"
@@ -99,7 +99,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Scraf">
                 <img
                   src={api + productitems?.[0]?.cards?.[2]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 3"
@@ -124,7 +124,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Dress">
                 <img
                   src={api + productitems?.[0]?.cards?.[3]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 4"
@@ -152,7 +152,7 @@ const Products = () => {
           <SecDiv>
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Greentop">
                 <img
                   src={api + productitems?.[0]?.cards?.[4]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 5"
@@ -176,7 +176,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Shoe">
                 <img
                   src={api + productitems?.[0]?.cards?.[5]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 6"
@@ -204,7 +204,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Raple">
                 <img
                   src={api + productitems?.[0]?.cards?.[6]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 7"
@@ -229,7 +229,7 @@ const Products = () => {
 
             <CustomCard>
               <CardContent>
-                <Link href="/ProductLink">
+                <Link href="/Glass">
                 <img
                   src={api + productitems?.[0]?.cards?.[7]?.cardimages?.data?.[0]?.attributes?.url}
                   alt="Brand 8"

@@ -152,7 +152,7 @@ export const StyleTypo = styled(Typography)`
     font-size:14px;
     position:absolute;
     margin-top:30px;
-    margin-left:40px;
+    margin-left:0px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:0px;
         margin-top:20px;
@@ -174,7 +174,29 @@ export const StyleTypo1 = styled(Typography)`
     font-size:14px;
     position:absolute;
     margin-top:30px;
-    margin-left:70px;
+    margin-left:40px;
+    @media(min-width:390px) and (max-width:767px){
+        margin-left:0px;
+        margin-top:20px;
+        font-size:12px;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        margin-left:40px;
+        margin-top:20px;
+        font-size:12px;
+    }
+    @media(min-width:1024px) and (max-width:1199px){
+         margin-left:26px;
+    }
+`
+export const StyleTypo2 = styled(Typography)`
+    font-family:Inter;
+    font-weight:400;
+    color:#191919;
+    font-size:14px;
+    position:absolute;
+    margin-top:30px;
+    margin-left:15px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:0px;
         margin-top:20px;

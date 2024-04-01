@@ -62,6 +62,7 @@ export const StyledBox1 = styled(Box)`
         height:300px;
         width:300px;
         margin-left:35px;
+        margin-right:35px;
     }
     @media(min-width:390px) and (max-width:767px){
         height:200px;
@@ -688,7 +689,7 @@ export const DetailTypo4 = styled(Typography)`
     }
 `
 export const BreadcrumbsStyle = styled(Breadcrumbs)`
-     margin-left:540px;
+     margin-left:490px;
      margin-top:15px;
      @media(min-width:390px) and (max-width:767px){
         margin-left:120px;
