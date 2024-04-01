@@ -100,9 +100,9 @@ export const Footer = () => {
             sm={6}
             md={5}
             lg={4}
-            sx={{ marginBottom: { xs: "20px", sm: 0,} ,marginLeft: {xs:"80px",md:"30px"} }}
+            sx={{ marginBottom: { xs: "20px", sm: 0,} ,marginLeft: {xs:"180px",md:"30px"} }}
           >
-            <Grid container spacing={0} sx={{ marginLeft: "90px" }}>
+            <Grid container spacing={0} sx={{ marginLeft: {lg:"90px"} }}>
               <Grid item xs={8} md={6} lg={7}>
                 <AbTypography
                   sx={{ color: "black", fontWeight: "600", mb: "10px", mt:{sm:"20px",md:"0px",lg:"5px"}}}

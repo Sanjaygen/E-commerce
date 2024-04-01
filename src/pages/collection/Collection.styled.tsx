@@ -9,16 +9,19 @@ export const SetIcon = styled(Box)`
     padding:8px;
     width:15%;
     cursor:pointer;
+    margin-top:20px;
     @media(min-width:390px) and (max-width:767px){
        margin-left:0px;
-       width:45%;
+       width:47%;
     }
     @media(min-width:768px) and (max-width:1023px){
        margin-left:0px;
        width:25%;
+       margin-top:40px;
     }
     @media(min-width:1024px) and (max-width:1199px){
-        width:20%; 
+        width:20%;
+        margin-top:50px; 
     }
     @media(min-width:1450px) and (max-width:1550px){
         width:12%
@@ -62,6 +65,7 @@ export const StyledBox1 = styled(Box)`
         height:300px;
         width:300px;
         margin-left:35px;
+        margin-right:35px;
     }
     @media(min-width:390px) and (max-width:767px){
         height:200px;
@@ -327,6 +331,7 @@ export const TypographyLi = styled("li")`
 export const DivCount = styled("div")`
     display:flex;
     margin-top:20px;
+
 `
 export const DivCount1 = styled("div")`
     display:flex;
@@ -345,7 +350,7 @@ export const CountTypo1 = styled(Typography)`
     height:45px;
     @media(min-width:390px) and (max-width:767px){
         padding-left:20px;
-        padding:10px;
+        padding:5px;
     }
     @media(min-width:1024px) and (max-width:1199px){
         padding-left:20px;
@@ -363,12 +368,12 @@ export const CountTypo2 = styled(Typography)`
     margin-left:30px;
     @media(min-width:390px) and (max-width:767px){
         padding-left:20px;
-        padding:10px;
-        margin-left:25px;
+        padding:5px;
+        margin-left:20px;
     }
     @media(min-width:1024px) and (max-width:1199px){
         padding-left:20px;
-        padding:10px;
+        padding:5px;
         margin-left:25px;
     }
 `
@@ -382,8 +387,8 @@ export const CountTypo3 = styled(Typography)`
     margin-left:30px;
     @media(min-width:390px) and (max-width:767px){
         padding-left:20px;
-        padding:10px;
-        margin-left:15px;
+        padding:5px;
+        margin-left:10px;
     }
     @media(min-width:1024px) and (max-width:1199px){
         padding-left:20px;
@@ -399,7 +404,7 @@ export const CountTypo4 = styled(Typography)`
     padding-left:25px;
     @media(min-width:390px) and (max-width:767px){
         padding-left:20px;
-        padding:10px;
+        padding:5px;
     }
     @media(min-width:768px) and (max-width:1023px){
         padding-left:20px;
@@ -423,7 +428,7 @@ export const CountTypo5 = styled(Typography)`
     margin-left:68px;
     @media(min-width:390px) and (max-width:767px){
         padding-left:20px;
-        padding:10px;
+        padding:5px;
         margin-left:25px;
     }
     @media(min-width:768px) and (max-width:1023px){
@@ -444,7 +449,7 @@ export const CountTypo6 = styled(Typography)`
     margin-left:43px;
     @media(min-width:390px) and (max-width:767px){
         margin-left:15px;
-        padding:10px;
+        padding:5px;
     }
     @media(min-width:1024px) and (max-width:1199px){
         padding-left:20px;
@@ -553,7 +558,7 @@ export const ButtonDiv5 = styled("button")`
     padding:5px;
     cursor:pointer;
     @media(min-width:390px) and (max-width:767px){
-       margin-left:15px;
+       margin-left:10px;
        width:100px;
     }
     @media(min-width:1024px) and (max-width:1199px){
@@ -691,10 +696,10 @@ export const DetailTypo4 = styled(Typography)`
     }
 `
 export const BreadcrumbsStyle = styled(Breadcrumbs)`
-     margin-left:540px;
+     margin-left:500px;
      margin-top:15px;
      @media(min-width:390px) and (max-width:767px){
-        margin-left:120px;
+        margin-left:100px;
      }
      @media(min-width:768px) and (max-width:1023px){
         margin-left:285px;
@@ -703,7 +708,7 @@ export const BreadcrumbsStyle = styled(Breadcrumbs)`
         margin-left:400px;
      }
      @media(min-width:1439px){
-        margin-left:600px;
+        margin-left:490px;
      }
      @media(min-width:1450px) and (max-width:1550px){
         margin-left:620px;

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Link, Typography, styled } from "@mui/material";
 export const BoxStyled = styled(Box)`
   background-color: rgba(30, 40, 50, 0.05);
+  height:120px;
   margin: 0 auto;
   width: 100%;
   @media (min-width: 390px) and (max-width: 767px) {

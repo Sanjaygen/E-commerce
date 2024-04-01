@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import ListIcon from "@mui/icons-material/List";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
+import { Box, Breadcrumbs, Container, Link, Typography } from "@mui/material";
 import {
   BoxContainer,
   BrandTypography,
@@ -73,7 +73,7 @@ const Collection = () => {
     const buttonText = leftdetail?.[0]?.buy?.[0]?.color?.button?.[0]?.color?.text;
 
     return (
-      <>
+      <Container>
         <SetIcon>
           <Typography sx={{ width: "max-content" }}>
             <ListIcon
@@ -401,7 +401,7 @@ const Collection = () => {
           </DetailTypo4>
           </BoxDetails1>
         </Tabs>
-      </>
+      </Container>
     );
   };
 

@@ -9,6 +9,7 @@ export const SetIcon = styled(Box)`
     padding:8px;
     width:15%;
     cursor:pointer;
+    margin-top:50px;
     @media(min-width:390px) and (max-width:767px){
        margin-left:0px;
        width:45%;
