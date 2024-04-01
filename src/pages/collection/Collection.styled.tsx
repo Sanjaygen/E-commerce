@@ -112,8 +112,11 @@ export const StyledBox1 = styled(Box)`
 `
 export const StyledBox = styled(Box)`
     @media(min-width:390px) and (max-width:767px){
-          position:absolute;
-          margin-top:200px;
+          position:relative;
+          top: 200px;
+    }
+    @media(min-width:768px) and (max-width:1023px){
+        position:relative;
     }
 `
 export const ImageStyled1 = styled("div")`
@@ -401,7 +404,7 @@ export const CountTypo4 = styled(Typography)`
     @media(min-width:768px) and (max-width:1023px){
         padding-left:20px;
         padding:10px;
-        position:absolute;
+        position:relative;
         margin-top:-65px;
         left:68%;
     }
