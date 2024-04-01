@@ -3,7 +3,7 @@
 "use client";
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
-import { CardButton, CardButton1, CardDiv, CardTypo, CardTypo1, CardTypo2, CardTypo3, CarouselBox, StyleTypo, StyleTypo1, TypoProducts, TypographyAmt, TypographyAmt1 } from './Relatedproducts.styled'
+import { BoxStyled, CardButton, CardButton1, CardDiv, CardTypo, CardTypo1, CardTypo2, CardTypo3, CarouselBox, StyleTypo, StyleTypo1, TypoProducts, TypographyAmt, TypographyAmt1 } from './Relatedproducts.styled'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { PRODUCTSQUERY } from '../collection/query';
 import { useQuery } from '@apollo/client';
@@ -18,8 +18,9 @@ const Relatedproducts = () => {
     const Carousel = () => {
         return (
             <>
+                
+                <BoxStyled>
                 <TypoProducts variant="h4">{products?.data?.[0]?.attributes?.title}</TypoProducts>
-                <Box>   
                     <CarouselBox>
                         <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
                             <CardDiv>
@@ -82,7 +83,7 @@ const Relatedproducts = () => {
                             <TypographyAmt1>{cards?.[3]?.prize1}</TypographyAmt1>
                         </Card>
                     </CarouselBox>
-                </Box>
+                </BoxStyled>
             </>
         )
     }

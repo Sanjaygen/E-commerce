@@ -3,7 +3,7 @@
 "use client";
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
-import { CardButton, CardButton1, CardDiv, CardTypo, CardTypo1, CardTypo2, CardTypo3, CarouselBox, StyleTypo, StyleTypo1, TypoProducts, TypographyAmt, TypographyAmt1 } from './Greentoprelate.styled'
+import { BoxStyled, CardButton, CardButton1, CardDiv, CardTypo, CardTypo1, CardTypo2, CardTypo3, CarouselBox, StyleTypo, StyleTypo1, TypoProducts, TypographyAmt, TypographyAmt1 } from './Greentoprelate.styled'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useQuery } from '@apollo/client';
 import { TOPSQUERY } from '../greentop/query';
@@ -18,8 +18,8 @@ const Greentoprelated = () => {
     const Carousel = () => {
         return (
             <>
-                <TypoProducts variant="h4">{greentops?.data?.[0]?.attributes?.heading}</TypoProducts>
-                <Box>
+            <BoxStyled>
+                <TypoProducts variant="h4">{greentops?.data?.[0]?.attributes?.heading}</TypoProducts> 
                     <CarouselBox>
                         <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
                             <CardDiv>
@@ -82,7 +82,7 @@ const Greentoprelated = () => {
                             <TypographyAmt1>{cards?.[3]?.prize}</TypographyAmt1>
                         </Card>
                     </CarouselBox>
-                </Box>
+                </BoxStyled>
             </>
         )
     }
