@@ -48,7 +48,7 @@ const Greentoprelated = () => {
                             <CardContent>
                                 <CardButton bgcolor={cardButton} textcolor= {cardText}><ShoppingCartOutlinedIcon sx={{color:"#6F6F6F",fontSize:"15px"}}/> {cards?.[1]?.cardcontnet?.[0].title}</CardButton>
                             </CardContent>
-                            <StyleTypo>{cards?.[1]?.text}</StyleTypo>
+                            <StyleTypo sx={{marginLeft:{xs:"30px"}}}>{cards?.[1]?.text}</StyleTypo>
                             <TypographyAmt>{cards?.[1]?.prize}</TypographyAmt>
                         </Card>
                         <Card sx={{width:{sm:"232px",md:"300px"},height:{sm:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none",display:{xs:"none",sm:"block"}}}>

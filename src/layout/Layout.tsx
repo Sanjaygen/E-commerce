@@ -15,7 +15,7 @@ const DashboardLayout = ({ children }: LayoutProps) => {
         <LayoutContainer>
               <Header/>
                 {children}
-                <Footer/>
+                {/* <Footer/> */}
         </LayoutContainer>
     );
 };

@@ -15,10 +15,12 @@ export const SetIcon = styled(Box)`
     }
     @media(min-width:768px) and (max-width:1023px){
        margin-left:0px;
+       margin-top:30px;
        width:25%;
     }
     @media(min-width:1024px) and (max-width:1199px){
         width:20%; 
+        margin-top:50px;
     }
     @media(min-width:1450px) and (max-width:1550px){
         width:12%

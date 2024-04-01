@@ -6,11 +6,13 @@ import styled from "styled-components";
 export const SetIcon = styled(Box)`
     color:#fff;
     background:#E73C17;
+    margin-top:20px;
     padding:8px;
     width:15%;
     cursor:pointer;
     @media(min-width:390px) and (max-width:767px){
        margin-left:0px;
+       margin-top:0px;
        width:45%;
     }
     @media(min-width:768px) and (max-width:1023px){
@@ -19,6 +21,7 @@ export const SetIcon = styled(Box)`
     }
     @media(min-width:1024px) and (max-width:1199px){
         width:20%; 
+        margin-top:50px;
     }
     @media(min-width:1450px) and (max-width:1550px){
         width:12%

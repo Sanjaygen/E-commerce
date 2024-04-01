@@ -19,7 +19,7 @@ const Relatedproducts = () => {
         return (
             <>
                 <TypoProducts variant="h4">{products?.data?.[0]?.attributes?.title}</TypoProducts>
-                <Box>
+                <Box>   
                     <CarouselBox>
                         <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
                             <CardDiv>
