@@ -708,7 +708,7 @@ export const BreadcrumbsStyle = styled(Breadcrumbs)`
         margin-left:400px;
      }
      @media(min-width:1439px){
-        margin-left:490px;
+        margin-left:600px;
      }
      @media(min-width:1450px) and (max-width:1550px){
         margin-left:620px;

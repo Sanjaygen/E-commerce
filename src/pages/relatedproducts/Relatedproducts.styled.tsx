@@ -164,7 +164,7 @@ export const CardButton = styled("button")<{bgcolor: string; textcolor: string;}
     @media(min-width:768px) and (max-width:1023px){
         width:150px;
         margin-left:7px;
-        margin-top:10px;
+        margin-top:0px;
     }
     @media(min-width:1024px) and (max-width:1199px){
         margin-left:0px; 
@@ -233,7 +233,7 @@ export const StyleTypo1 = styled(Typography)`
         margin-left:40px;
         margin-top:20px;
         font-size:12px;
-        position:relative;
+        // position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:26px;
@@ -270,7 +270,7 @@ export const TypographyAmt1 = styled(Typography)`
     @media(min-width:768px) and (max-width:1023px){
         margin-left:80px;
         margin-top:40px;
-        position:relative;
+        // position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:66px;

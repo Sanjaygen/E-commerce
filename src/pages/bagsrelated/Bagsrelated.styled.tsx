@@ -208,10 +208,10 @@ export const StyleTypo = styled(Typography)`
         margin-left:25px;
         margin-top:20px;
         font-size:12px;
-        // position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:23px;
+         font-size:10px;
     }
 `
 export const StyleTypo1 = styled(Typography)`
@@ -232,10 +232,10 @@ export const StyleTypo1 = styled(Typography)`
         margin-left:40px;
         margin-top:20px;
         font-size:12px;
-        position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:26px;
+         font-size:10px;
     }
 `
 export const StyleTypo2 = styled(Typography)`
@@ -260,6 +260,7 @@ export const StyleTypo2 = styled(Typography)`
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:26px;
+         font-size:10px;
     }
 `
 export const TypographyAmt = styled(Typography)`
@@ -293,7 +294,7 @@ export const TypographyAmt1 = styled(Typography)`
     @media(min-width:768px) and (max-width:1023px){
         margin-left:80px;
         margin-top:40px;
-        position:relative;
+        // position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:66px;
