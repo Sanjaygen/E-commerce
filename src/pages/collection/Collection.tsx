@@ -73,7 +73,7 @@ const Collection = () => {
     const buttonText = leftdetail?.[0]?.buy?.[0]?.color?.button?.[0]?.color?.text;
 
     return (
-      <Container>
+      <>
         <SetIcon>
           <Typography sx={{ width: "max-content" }}>
             <ListIcon
@@ -401,7 +401,7 @@ const Collection = () => {
           </DetailTypo4>
           </BoxDetails1>
         </Tabs>
-      </Container>
+      </>
     );
   };
 

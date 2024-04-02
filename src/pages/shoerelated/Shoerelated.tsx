@@ -22,7 +22,7 @@ const Shoerelated = () => {
                 <TypoProducts variant="h4">{shoes?.data?.[0]?.attributes?.heading}</TypoProducts>
                 
                     <CarouselBox>
-                        <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
+                        <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",sm:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
                             <CardDiv>
                                 <CardTypo>{cards?.[0]?.title}</CardTypo>
                                 <img src={cards?.[0]?.subimage?.data?.[0]?.attributes?.url}/>
@@ -37,7 +37,7 @@ const Shoerelated = () => {
                             <StyleTypo>{cards?.[0]?.text}</StyleTypo>
                             <TypographyAmt>{cards?.[0]?.prize}</TypographyAmt>
                         </Card>
-                        <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
+                        <Card sx={{width:{xs:"232px",md:"300px"},height:{xs:"310px",sm:"361px"},background:"#F1F1F1",boxShadow:"none"}}>
                             <CardDiv>
                                 <CardTypo1>{cards?.[1]?.title}</CardTypo1>
                                 <img src={cards?.[1]?.subimage?.data?.[0]?.attributes?.url}/>
@@ -52,7 +52,7 @@ const Shoerelated = () => {
                             <StyleTypo>{cards?.[1]?.text}</StyleTypo>
                             <TypographyAmt>{cards?.[1]?.prize}</TypographyAmt>
                         </Card>
-                        <Card sx={{width:{sm:"232px",md:"300px"},height:{sm:"310px",md:"361px"},background:"#F1F1F1",boxShadow:"none",display:{xs:"none",sm:"block"}}}>
+                        <Card sx={{width:{sm:"232px",md:"300px"},height:{xs:"310px",sm:"361px"},background:"#F1F1F1",boxShadow:"none",display:{xs:"none",sm:"block"}}}>
                             <CardDiv>
                                 <CardTypo2>{cards?.[2]?.title}</CardTypo2>
                                 <img src={cards?.[2]?.subimage?.data?.[0]?.attributes?.url}/>

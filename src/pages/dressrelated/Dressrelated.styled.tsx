@@ -270,7 +270,6 @@ export const TypographyAmt1 = styled(Typography)`
     @media(min-width:768px) and (max-width:1023px){
         margin-left:80px;
         margin-top:40px;
-        position:relative;
     }
     @media(min-width:1024px) and (max-width:1199px){
          margin-left:66px;
